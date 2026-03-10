@@ -176,8 +176,6 @@ function App() {
           <p className="subtitle">Chủ nghĩa Tư bản Độc quyền trong Thế kỷ XXI</p>
         </div>
         <div className="header-tools">
-          <button className="h-tool-btn" onClick={() => globalThis.print()} title="Xuất PDF / In">🖨️ PDF</button>
-          <button className={`h-tool-btn ${timerOpen ? 'active' : ''}`} onClick={() => setTimerOpen(t => !t)} title="Đồng hồ đếm ngược">⏱ Timer</button>
           <button className="h-tool-btn primary" onClick={() => setSlideshowOpen(true)} title="Chế độ Slideshow">▶ Slideshow</button>
         </div>
       </header>
