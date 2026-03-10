@@ -164,16 +164,11 @@ function App() {
         {SECTIONS.slice(6).map(s => (
           <SectionCard key={s.id} {...s} onClick={() => openModal(s.id)} />
         ))}
-        <button className="quiz-banner-card" onClick={() => setQuizOpen(true)}>
-          <span className="quiz-banner-icon">🎯</span>
-          <div className="quiz-banner-info">
-            <div className="quiz-banner-title">Kiểm tra kiến thức</div>
-            <div className="quiz-banner-desc">10 câu hỏi về Kinh tế chính trị Mác-Lênin</div>
-          </div>
-          <span className="quiz-banner-cta">Bắt đầu →</span>
-        </button>
-
         {/* Tools row */}
+        <div className="tools-section-title">
+          <span className="tools-section-icon">🛠️</span>
+          <span>Công cụ học tập</span>
+        </div>
         <div className="tools-row">
           {[
             { icon: '📊', title: 'Biểu đồ dữ liệu', sub: 'FDI, OPEC, thị phần', color: '#1565c0', bg: '#dbeafe', onClick: () => setChartsOpen(true) },
@@ -189,12 +184,21 @@ function App() {
             </button>
           ))}
         </div>
+
+        <button className="quiz-banner-card" onClick={() => setQuizOpen(true)}>
+          <span className="quiz-banner-icon">🎯</span>
+          <div className="quiz-banner-info">
+            <div className="quiz-banner-title">Kiểm tra kiến thức</div>
+            <div className="quiz-banner-desc">10 câu hỏi về Kinh tế chính trị Mác-Lênin</div>
+          </div>
+          <span className="quiz-banner-cta">Bắt đầu →</span>
+        </button>
       </main>
 
       {/* Footer */}
       <footer className="footer">
         <p className="footer-copy">© 2026 · Tài liệu học tập Kinh tế chính trị Mác - Lênin</p>
-        <div className="footer-ai-label">🤖 Hỗ trợ bởi AI</div>
+        <div className="footer-ai-label"><img src="https://ava-grp-talk.zadn.vn/9/9/a/2/2/360/8d84b3493ccd55c45d27228da2ae5d7c.jpg" alt="AI" style={{ width: '1.2rem', height: '1.2rem', objectFit: 'cover', borderRadius: '50%', verticalAlign: 'middle', marginRight: '.35rem' }} />Hỗ trợ bởi AI</div>
         <div className="footer-ai-row">
           {[
             { icon: '✦', name: 'Gemini', role: 'Soạn nội dung & outline bài thuyết trình', color: '#4285F4', bg: 'rgba(66,133,244,.12)', border: 'rgba(66,133,244,.3)' },
@@ -3204,40 +3208,32 @@ function AiChat() {
 
   return (
     <>
-      {/* Floating AI Button */}
-      <button
-        className={`ai-fab ${open ? 'ai-fab-open' : ''}`}
-        onClick={() => setOpen(!open)}
-        aria-label="Trợ lý AI học tập"
-      >
-        {open ? (
-          <span className="ai-fab-close">✕</span>
-        ) : (
-          <>
-            <svg className="ai-fab-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="12" y="20" width="40" height="28" rx="9" fill="white" fillOpacity="0.95" />
-              <circle cx="23" cy="34" r="4.5" fill="#667eea" />
-              <circle cx="41" cy="34" r="4.5" fill="#764ba2" />
-              <rect x="25" y="41" width="14" height="3" rx="1.5" fill="#667eea" />
-              <rect x="28" y="12" width="8" height="10" rx="4" fill="white" fillOpacity="0.9" />
-              <circle cx="32" cy="7" r="3" fill="#ffd700" />
-              <rect x="3" y="26" width="9" height="7" rx="3.5" fill="white" fillOpacity="0.85" />
-              <rect x="52" y="26" width="9" height="7" rx="3.5" fill="white" fillOpacity="0.85" />
-            </svg>
-            <span className="ai-fab-label">Hỏi AI</span>
-          </>
+      {/* Floating AI Character */}
+      <div className={`ai-fab-char ${open ? 'ai-fab-char-open' : ''}`} onClick={() => setOpen(!open)} role="button" aria-label="Trợ lý AI học tập">
+        {!open && (
+          <div className="ai-fab-bubble">✨ Bạn muốn hỏi gì?</div>
         )}
-      </button>
+        {open && (
+          <div className="ai-fab-bubble ai-fab-bubble-close">✕ Đóng</div>
+        )}
+        <div className="ai-fab-char-bg">
+          <img
+            src="https://ava-grp-talk.zadn.vn/9/9/a/2/2/360/8d84b3493ccd55c45d27228da2ae5d7c.jpg"
+            alt="AI"
+            className="ai-fab-char-img"
+          />
+        </div>
+      </div>
 
       {/* Chat Window */}
       {open && (
         <div className="ai-chat-window">
           <div className="ai-chat-header">
             <div className="ai-chat-header-left">
-              <div className="ai-chat-avatar">🤖</div>
+              <div className="ai-chat-avatar"><img src="https://ava-grp-talk.zadn.vn/9/9/a/2/2/360/8d84b3493ccd55c45d27228da2ae5d7c.jpg" alt="AI" /></div>
               <div>
-                <div className="ai-chat-title">Trợ lý AI Học tập</div>
-                <div className="ai-chat-status">● Đang hoạt động</div>
+                <div className="ai-chat-title">Triết Gia AI</div>
+                <div className="ai-chat-status">Đang hoạt động</div>
               </div>
             </div>
             <button className="ai-chat-header-close" onClick={() => setOpen(false)}>✕</button>
@@ -3246,7 +3242,7 @@ function AiChat() {
           <div className="ai-chat-messages" id="ai-chat-messages">
             {messages.map((msg) => (
               <div key={msg.id} className={`ai-msg ai-msg-${msg.from}`}>
-                {msg.from === 'ai' && <div className="ai-msg-avatar">🤖</div>}
+                {msg.from === 'ai' && <div className="ai-msg-avatar"><img src="https://ava-grp-talk.zadn.vn/9/9/a/2/2/360/8d84b3493ccd55c45d27228da2ae5d7c.jpg" alt="AI" /></div>}
                 <div
                   className="ai-msg-bubble"
                   dangerouslySetInnerHTML={{
