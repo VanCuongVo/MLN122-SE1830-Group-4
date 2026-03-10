@@ -791,6 +791,142 @@ ul li::before {
   color: var(--text);
 }
 
+/* ── Slide-style components ── */
+.slide-bullets {
+  margin: .5rem 0 0 1.1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  font-size: .92rem;
+  color: var(--text);
+}
+
+.slide-bullets li {
+  line-height: 1.5;
+}
+
+.slide-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: .9rem;
+}
+
+.slide-examples span {
+  background: rgba(66, 165, 245, .15);
+  border: 1px solid rgba(66, 165, 245, .35);
+  border-radius: 99px;
+  padding: .25rem .85rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--sky);
+}
+
+.slide-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.slide-col-head {
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--sky);
+  margin: 0 0 .4rem;
+}
+
+.speaker-note {
+  margin-top: 1rem;
+  padding: .75rem 1rem;
+  background: rgba(251, 191, 36, .1);
+  border-left: 3px solid #fbbf24;
+  border-radius: 0 8px 8px 0;
+  font-size: .85rem;
+  color: rgba(220, 230, 240, .85);
+}
+
+@media (max-width: 540px) {
+  .slide-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Org Chart ── */
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 0;
+}
+
+.org-top,
+.org-bottom,
+.org-final {
+  display: flex;
+  justify-content: center;
+}
+
+.org-mid {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.org-arrow-down {
+  font-size: 1.4rem;
+  color: rgba(220, 230, 240, .4);
+  line-height: 1;
+}
+
+.org-box {
+  padding: .65rem 1rem;
+  border-radius: 10px;
+  font-size: .82rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.org-box small {
+  display: block;
+  font-size: .7rem;
+  font-weight: 400;
+  color: rgba(220, 230, 240, .55);
+  margin-top: .15rem;
+}
+
+.org-main {
+  background: rgba(21, 101, 192, .3);
+  border: 1.5px solid rgba(66, 165, 245, .45);
+  min-width: 200px;
+}
+
+.org-sub {
+  background: rgba(255, 255, 255, .06);
+  border: 1.5px solid rgba(255, 255, 255, .12);
+  min-width: 130px;
+}
+
+.org-small {
+  background: rgba(74, 222, 128, .1);
+  border: 1.5px solid rgba(74, 222, 128, .3);
+  min-width: 180px;
+}
+
+.org-chain {
+  background: rgba(251, 191, 36, .12);
+  border: 1.5px solid rgba(251, 191, 36, .35);
+  min-width: 240px;
+  color: #fbbf24;
+}
+
 .example-box {
   background: rgba(67, 160, 71, .18);
   padding: 1.3rem 1.5rem;

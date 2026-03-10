@@ -794,142 +794,177 @@ function TichTuSection() {
     <div className="section">
       <h2>🏢 Biểu hiện mới của Tích tụ và Tập trung Tư bản</h2>
 
-      <ImageGallery
-        title="🏭 Ví dụ: Các tập đoàn Concern & Conglomerate"
-        items={[
-          { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Berkshire_Hathaway.svg/320px-Berkshire_Hathaway.svg.png', label: 'Berkshire Hathaway', emoji: '💰' },
-          { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Samsung_Logo.svg/320px-Samsung_Logo.svg.png', label: 'Samsung (Chaebol)', emoji: '📱' },
-          { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Exor_logo.svg/320px-Exor_logo.svg.png', label: 'EXOR (Agnelli Group)', emoji: '🏎️' },
-          { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/320px-Coca-Cola_logo.svg.png', label: 'Coca-Cola', emoji: '🥤' },
-          { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Toyota.svg/320px-Toyota.svg.png', label: 'Toyota Group', emoji: '🚗' },
-        ]}
-      />
-
+      {/* Slide 1 – Tổng quan */}
       <div className="card highlight">
-        <h3>🎯 Các hình thức tổ chức độc quyền mới</h3>
-      </div>
-
-      {/* Concern */}
-      <div className="card">
-        <h3>🏭 Concern (Tập đoàn đa ngành)</h3>
-        <div className="definition">
-          <strong>Định nghĩa:</strong> Tổ chức độc quyền đa ngành gồm hàng trăm xí nghiệp
-          có quan hệ với nhiều ngành khác nhau, phân bố ở nhiều quốc gia.
+        <h3>📌 Nội dung chính</h3>
+        <ul className="slide-bullets">
+          <li>Trước đây, doanh nghiệp chủ yếu phát triển trong <strong>một ngành</strong>, <strong>một quốc gia</strong></li>
+          <li>Ngày nay, do toàn cầu hóa và công nghệ, các tập đoàn mở rộng ra <strong>nhiều ngành – nhiều quốc gia</strong></li>
+          <li>Xuất hiện hình thức tổ chức độc quyền mới: <strong>Concern</strong> và <strong>Conglomerate</strong></li>
+          <li>Doanh nghiệp vừa và nhỏ vẫn tồn tại nhưng <strong>liên kết, phụ thuộc</strong> tập đoàn lớn</li>
+        </ul>
+        <div className="slide-examples">
+          <span>Samsung</span><span>Berkshire Hathaway</span><span>Toyota Group</span><span>Vingroup</span>
         </div>
-
-        <div className="example-box">
-          <h4>📌 Ví dụ thực tế:</h4>
-          <ul>
-            <li><strong>Samsung (Hàn Quốc):</strong> điện tử, đóng tàu, bảo hiểm, xây dựng, khách sạn</li>
-            <li><strong>General Electric (Mỹ):</strong> hàng không, y tế, năng lượng, tài chính</li>
-            <li><strong>Siemens (Đức):</strong> điện tử, y tế, giao thông, năng lượng</li>
-          </ul>
-        </div>
-
-        <div className="reason-box">
-          <h4>🔑 Lý do hình thành:</h4>
-          <ul>
-            <li>Cạnh tranh gay gắt → kinh doanh chuyên môn hóa hẹp dễ phá sản</li>
-            <li>Đối phó luật chống độc quyền (cấm độc quyền 100% một ngành)</li>
-            <li>Đa dạng hóa rủi ro, tối ưu hóa lợi nhuận</li>
-          </ul>
+        <div className="speaker-note">
+          💬 <em>Ngày nay sự tích tụ và tập trung tư bản thể hiện qua sự xuất hiện của các tập đoàn xuyên quốc gia hoạt động ở nhiều ngành và nhiều quốc gia.</em>
         </div>
       </div>
 
-      {/* Conglomerate */}
+      {/* Slide 2 – Concern */}
       <div className="card">
-        <h3>💼 Conglomerate (Tập đoàn hỗn hợp)</h3>
+        <h3>🏭 Concern — Tập đoàn Đa ngành</h3>
         <div className="definition">
-          <strong>Định nghĩa:</strong> Sự kết hợp của hàng chục hãng vừa và nhỏ không có
-          liên quan trực tiếp về sản xuất hoặc dịch vụ.
+          <strong>Khái niệm:</strong> Tổ chức độc quyền đa ngành, gồm nhiều công ty hoạt động trong <strong>nhiều lĩnh vực khác nhau</strong> và ở nhiều quốc gia.
         </div>
-
-        <div className="example-box">
-          <h4>📌 Ví dụ thực tế:</h4>
-          <ul>
-            <li><strong>Berkshire Hathaway (Mỹ):</strong> bảo hiểm, đường sắt, năng lượng, bán lẻ, công nghệ</li>
-            <li><strong>Tata Group (Ấn Độ):</strong> ô tô, thép, IT, khách sạn, trà</li>
-            <li><strong>Alibaba (Trung Quốc):</strong> thương mại điện tử, cloud, thanh toán, truyền thông</li>
-          </ul>
-        </div>
-
-        <div className="comparison">
-          <div className="pros">
-            <h4>✅ Ưu điểm:</h4>
-            <ul>
-              <li>Thu lợi nhuận từ kinh doanh chứng khoán</li>
-              <li>Linh hoạt trong đầu tư</li>
+        <div className="slide-two-col">
+          <div>
+            <p className="slide-col-head">📌 Ví dụ cụ thể</p>
+            <ul className="slide-bullets">
+              <li><strong>Samsung (Hàn Quốc):</strong><br />điện tử · đóng tàu · xây dựng · bảo hiểm · khách sạn</li>
+              <li><strong>General Electric (Mỹ):</strong><br />hàng không · y tế · năng lượng · tài chính</li>
+              <li><strong>Siemens (Đức):</strong><br />điện tử · giao thông · y tế · năng lượng</li>
             </ul>
           </div>
-          <div className="cons">
-            <h4>⚠️ Nhược điểm:</h4>
-            <ul>
-              <li>Dễ bị phá sản nhanh</li>
-              <li>Phụ thuộc vào biến động tài chính</li>
+          <div>
+            <p className="slide-col-head">🔑 Lý do hình thành</p>
+            <ul className="slide-bullets">
+              <li>Cạnh tranh gay gắt — kinh doanh một ngành dễ phá sản</li>
+              <li>Tránh bị hạn chế bởi luật chống độc quyền</li>
+              <li>Đa dạng hóa rủi ro, tối đa hóa lợi nhuận</li>
             </ul>
           </div>
         </div>
+        <div className="speaker-note">
+          💬 <em>Concern là tập đoàn đa ngành. Samsung không chỉ sản xuất điện thoại mà còn hoạt động trong xây dựng, bảo hiểm và đóng tàu — đây chính là biểu hiện của Concern.</em>
+        </div>
       </div>
 
-      {/* Doanh nghiệp vừa và nhỏ */}
+      {/* Slide 3 – Conglomerate */}
+      <div className="card">
+        <h3>💼 Conglomerate — Tập đoàn Hỗn hợp</h3>
+        <div className="definition">
+          <strong>Khái niệm:</strong> Tập đoàn gồm nhiều công ty <strong>không liên quan trực tiếp đến sản xuất</strong>. Chủ yếu kiếm lợi nhuận từ đầu tư tài chính và chứng khoán.
+        </div>
+        <div className="slide-two-col">
+          <div>
+            <p className="slide-col-head">📌 Ví dụ cụ thể</p>
+            <ul className="slide-bullets">
+              <li><strong>Berkshire Hathaway (Mỹ — Warren Buffett):</strong><br />bảo hiểm · đường sắt · năng lượng · bán lẻ · công nghệ</li>
+              <li><strong>Tata Group (Ấn Độ):</strong><br />ô tô · thép · IT · khách sạn · trà</li>
+              <li><strong>Alibaba (Trung Quốc):</strong><br />thương mại điện tử · cloud · thanh toán · truyền thông</li>
+            </ul>
+          </div>
+          <div>
+            <p className="slide-col-head">⚖️ Đặc điểm</p>
+            <ul className="slide-bullets">
+              <li>✔ Linh hoạt trong đầu tư</li>
+              <li>✔ Dễ chuyển vốn sang lĩnh vực lợi nhuận cao</li>
+              <li>⚠ Dễ bị ảnh hưởng bởi biến động tài chính</li>
+            </ul>
+          </div>
+        </div>
+        <div className="speaker-note">
+          💬 <em>Khác với Concern, Conglomerate gồm các công ty không liên quan đến sản xuất — Berkshire Hathaway sở hữu cả công ty bảo hiểm lẫn đường sắt, những thứ hoàn toàn khác nhau.</em>
+        </div>
+      </div>
+
+      {/* Slide 4 – DNVVN */}
       <div className="card">
         <h3>🏪 Vai trò của Doanh nghiệp Vừa và Nhỏ</h3>
-
-        <div className="reason-box">
-          <h4>🔍 Lý do xuất hiện nhiều:</h4>
-          <div className="two-columns">
-            <div>
-              <strong>1. Công nghệ hiện đại:</strong>
-              <ul>
-                <li>Tiêu chuẩn hóa sản xuất</li>
-                <li>Chuyên môn hóa sâu</li>
-                <li>Hệ thống gia công phát triển</li>
-              </ul>
-            </div>
-            <div>
-              <strong>2. Thế mạnh riêng:</strong>
-              <ul>
-                <li>Nhạy cảm với thay đổi</li>
-                <li>Linh hoạt với thị trường</li>
-                <li>Dễ đổi mới công nghệ</li>
-              </ul>
-            </div>
+        <p style={{ fontSize: '.9rem', color: 'var(--text)', marginBottom: '.8rem' }}>
+          Trong nền kinh tế hiện nay, doanh nghiệp vừa và nhỏ vẫn phát triển mạnh — nhưng thường <strong>liên kết hoặc phụ thuộc</strong> vào các tập đoàn lớn.
+        </p>
+        <div className="slide-two-col">
+          <div>
+            <p className="slide-col-head">🔍 Nguyên nhân phát triển</p>
+            <ul className="slide-bullets">
+              <li>Công nghệ giúp chuyên môn hóa sản xuất</li>
+              <li>Tập đoàn lớn không tự làm tất cả → hợp tác với doanh nghiệp nhỏ</li>
+              <li>Linh hoạt, đổi mới nhanh, dễ thích ứng thị trường</li>
+            </ul>
+          </div>
+          <div>
+            <p className="slide-col-head">📌 Ví dụ cụ thể</p>
+            <ul className="slide-bullets">
+              <li><strong>Toyota:</strong> hợp tác với hơn 10.000 nhà cung cấp linh kiện toàn cầu</li>
+              <li><strong>Apple:</strong> thiết kế tại Mỹ — linh kiện từ hàng trăm công ty khác nhau</li>
+              <li><strong>Zara:</strong> làm việc với 1.400 xưởng may nhỏ ở Tây Ban Nha</li>
+            </ul>
           </div>
         </div>
-
-        <div className="example-box">
-          <h4>📌 Ví dụ cụ thể:</h4>
-          <ul>
-            <li><strong>Ngành ô tô:</strong> Toyota liên kết với 10,000+ nhà cung cấp vừa và nhỏ</li>
-            <li><strong>Công nghệ:</strong> Apple hợp tác với hàng nghìn công ty sản xuất linh kiện</li>
-            <li><strong>Thời trang:</strong> Zara làm việc với 1,400+ xưởng may nhỏ ở Tây Ban Nha</li>
-          </ul>
+        <div className="speaker-note">
+          💬 <em>Doanh nghiệp nhỏ đóng vai trò quan trọng trong chuỗi cung ứng toàn cầu — họ là mắt xích sản xuất cho các tập đoàn lớn.</em>
         </div>
       </div>
 
-      {/* Độc quyền ở nước đang phát triển */}
+      {/* Slide 5 – Nước đang phát triển */}
       <div className="card">
         <h3>🌏 Độc quyền ở các Nước đang Phát triển</h3>
-
-        <div className="example-box">
-          <h4>📌 Ví dụ điển hình:</h4>
-          <ul>
-            <li><strong>Reliance Industries (Ấn Độ):</strong> dầu khí, viễn thông, bán lẻ</li>
-            <li><strong>Petrobras (Brazil):</strong> chi phối ngành dầu khí Brazil</li>
-            <li><strong>Vingroup (Việt Nam):</strong> bất động sản, ô tô, điện thoại, bán lẻ</li>
-            <li><strong>Saudi Aramco (Ả Rập):</strong> độc quyền dầu mỏ toàn cầu</li>
-          </ul>
+        <p style={{ fontSize: '.9rem', color: 'var(--text)', marginBottom: '.8rem' }}>
+          Độc quyền không chỉ tồn tại ở các nước phát triển mà còn xuất hiện ngày càng mạnh ở các nước đang phát triển.
+        </p>
+        <div className="slide-two-col">
+          <div>
+            <p className="slide-col-head">📌 Ví dụ cụ thể</p>
+            <ul className="slide-bullets">
+              <li><strong>Vingroup (Việt Nam):</strong> bất động sản · VinFast · bán lẻ · công nghệ</li>
+              <li><strong>Reliance Industries (Ấn Độ):</strong> dầu khí · viễn thông · bán lẻ</li>
+              <li><strong>Petrobras (Brazil):</strong> chi phối toàn bộ ngành dầu khí</li>
+              <li><strong>Saudi Aramco (Ả Rập):</strong> độc quyền dầu mỏ quy mô toàn cầu</li>
+            </ul>
+          </div>
+          <div>
+            <p className="slide-col-head">🔑 Nguyên nhân hình thành</p>
+            <ul className="slide-bullets">
+              <li>Đầu tư từ các tập đoàn xuyên quốc gia (TNCs)</li>
+              <li>Ứng dụng khoa học công nghệ hiện đại</li>
+              <li>Quy mô vốn lớn đủ sức chi phối cả một ngành</li>
+            </ul>
+          </div>
         </div>
-
-        <div className="reason-box">
-          <h4>🔑 Nguyên nhân hình thành:</h4>
-          <ul>
-            <li>Sự thâm nhập của TNCs → chuyển giao công nghệ</li>
-            <li>Ứng dụng khoa học kỹ thuật hiện đại</li>
-            <li>Một doanh nghiệp lớn đủ sức chi phối cả ngành mới</li>
-          </ul>
+        <div className="speaker-note">
+          💬 <em>Ở Việt Nam, Vingroup là ví dụ điển hình — chỉ một tập đoàn nhưng hoạt động từ bất động sản đến ô tô, điện thoại, bệnh viện và trường học.</em>
         </div>
       </div>
+
+      {/* Sơ đồ */}
+      <div className="card">
+        <h3>📊 Sơ đồ: Cấu trúc Tập đoàn trong Nền kinh tế Hiện đại</h3>
+        <div className="org-chart">
+          <div className="org-top">
+            <div className="org-box org-main">🏛️ Tập đoàn lớn<br /><small>Concern / Conglomerate</small></div>
+          </div>
+          <div className="org-arrow-down">↓</div>
+          <div className="org-mid">
+            <div className="org-box org-sub">🏢 Công ty con A<br /><small>Ngành điện tử</small></div>
+            <div className="org-box org-sub">🏢 Công ty con B<br /><small>Ngành tài chính</small></div>
+            <div className="org-box org-sub">🏢 Công ty con C<br /><small>Ngành logistics</small></div>
+          </div>
+          <div className="org-arrow-down">↓</div>
+          <div className="org-bottom">
+            <div className="org-box org-small">🏪 DN vừa & nhỏ<br /><small>Gia công · Linh kiện</small></div>
+          </div>
+          <div className="org-arrow-down">↓</div>
+          <div className="org-final">
+            <div className="org-box org-chain">🌐 Chuỗi sản xuất toàn cầu</div>
+          </div>
+        </div>
+        <div className="speaker-note">
+          💬 <em>Tóm lại, tích tụ và tập trung tư bản ngày nay thể hiện qua Concern và Conglomerate hoạt động toàn cầu — bên cạnh đó doanh nghiệp nhỏ vẫn đóng vai trò quan trọng trong chuỗi sản xuất.</em>
+        </div>
+      </div>
+
+      <ImageGallery
+        title="🏭 Các tập đoàn tiêu biểu"
+        items={[
+          { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Samsung_Logo.svg/320px-Samsung_Logo.svg.png', label: 'Samsung', emoji: '📱' },
+          { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Berkshire_Hathaway.svg/320px-Berkshire_Hathaway.svg.png', label: 'Berkshire Hathaway', emoji: '💰' },
+          { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Toyota.svg/320px-Toyota.svg.png', label: 'Toyota Group', emoji: '🚗' },
+          { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/320px-Coca-Cola_logo.svg.png', label: 'Coca-Cola', emoji: '🥤' },
+          { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Exor_logo.svg/320px-Exor_logo.svg.png', label: 'EXOR (Agnelli)', emoji: '🏎️' },
+        ]}
+      />
     </div>
   )
 }
@@ -938,7 +973,172 @@ function TichTuSection() {
 function TaiChinhSection() {
   return (
     <div className="section">
-      <h2>💰 Biểu hiện mới về Tư bản Tài chính</h2>
+      <h2>💰 Biểu hiện về vai trò Tư bản Tài chính</h2>
+
+      {/* Slide 1: Khái niệm */}
+      <div className="card highlight">
+        <h3>1️⃣ Khái niệm</h3>
+        <p>
+          <strong>Tư bản tài chính</strong> là sự kết hợp giữa <strong>tư bản ngân hàng</strong> và{' '}
+          <strong>tư bản công nghiệp</strong>, hình thành nên các tập đoàn tài chính lớn có khả năng chi phối nền kinh tế.
+        </p>
+        <p style={{ marginTop: '.6rem' }}>
+          Ngày nay, các tập đoàn tài chính không chỉ hoạt động trong lĩnh vực ngân hàng, mà còn đầu tư vào nhiều ngành kinh tế khác nhau.
+        </p>
+        <div className="slide-examples" style={{ marginTop: '.8rem' }}>
+          <span>🏦 Tư bản ngân hàng</span>
+          <span style={{ background: 'none', border: 'none', color: 'var(--text)' }}>➕</span>
+          <span>🏭 Tư bản công nghiệp</span>
+          <span style={{ background: 'none', border: 'none', color: 'var(--text)' }}>➡️</span>
+          <span>💰 Tập đoàn tài chính lớn</span>
+        </div>
+        <div className="speaker-note">
+          🎤 <strong>Nói:</strong> Thưa thầy/cô và các bạn, hôm nay nhóm em trình bày về biểu hiện vai trò của tư bản tài chính – một đặc trưng nổi bật của chủ nghĩa tư bản độc quyền. Tư bản tài chính hình thành khi tư bản ngân hàng và tư bản công nghiệp hợp nhất lại với nhau.
+        </div>
+      </div>
+
+      {/* Slide 2: Biểu hiện 1 */}
+      <div className="card">
+        <h3>2️⃣ Biểu hiện chính</h3>
+        <h4 style={{ margin: '.4rem 0 .6rem', color: 'var(--sky)' }}>📊 1. Mở rộng phạm vi liên kết</h4>
+        <div className="slide-two-col">
+          <div>
+            <p className="slide-col-head">Nội dung</p>
+            <ul className="slide-bullets">
+              <li>Liên kết nhiều ngành: <strong>công nghiệp · nông nghiệp · thương mại · tín dụng · dịch vụ</strong></li>
+              <li>Tạo thành các tổ hợp kinh tế lớn</li>
+            </ul>
+            <p className="slide-col-head" style={{ marginTop: '.9rem' }}>📈 Xu hướng mới</p>
+            <ul className="slide-bullets">
+              <li>📱 Fintech – công nghệ tài chính</li>
+              <li>⚡ Tài chính kết hợp năng lượng xanh</li>
+              <li>🏥 Tài chính + y tế & nông nghiệp CNC</li>
+            </ul>
+          </div>
+          <div>
+            <p className="slide-col-head">Ví dụ thực tế</p>
+            <ul className="slide-bullets">
+              <li>
+                <strong>JPMorgan Chase (Mỹ):</strong>
+                <br /><span style={{ color: 'rgba(220,230,240,.65)', fontSize: '.8rem' }}>ngân hàng đầu tư · quản lý tài sản · ngân hàng thương mại · thẻ tín dụng · quỹ đầu tư</span>
+              </li>
+              <li style={{ marginTop: '.5rem' }}>
+                <strong>ICBC (Trung Quốc):</strong>
+                <br /><span style={{ color: 'rgba(220,230,240,.65)', fontSize: '.8rem' }}>ngân hàng lớn nhất thế giới · công nghiệp · bất động sản · bảo hiểm</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="speaker-note">
+          🎤 <strong>Nói:</strong> Biểu hiện đầu tiên là các tập đoàn tài chính ngày nay không còn chỉ hoạt động trong lĩnh vực ngân hàng mà mở rộng sang rất nhiều ngành. JPMorgan Chase vừa là ngân hàng đầu tư, vừa quản lý tài sản, vừa cung cấp thẻ tín dụng và quỹ đầu tư.
+        </div>
+      </div>
+
+      {/* Slide 3: Biểu hiện 2 */}
+      <div className="card">
+        <h4 style={{ margin: '0 0 .6rem', color: 'var(--sky)' }}>📜 2. Cơ chế tham dự và ủy nhiệm</h4>
+        <div className="slide-two-col">
+          <div>
+            <p className="slide-col-head">Cơ chế hoạt động</p>
+            <div className="org-chart" style={{ alignItems: 'stretch', padding: '.3rem 0' }}>
+              <div className="org-box org-sub" style={{ fontSize: '.78rem', minWidth: 0 }}>
+                <strong>Bước 1:</strong> Công ty phát hành cổ phiếu
+              </div>
+              <div className="org-arrow-down">↓</div>
+              <div className="org-box org-sub" style={{ fontSize: '.78rem', minWidth: 0 }}>
+                <strong>Bước 2:</strong> Nhiều người dân mua cổ phiếu
+              </div>
+              <div className="org-arrow-down">↓</div>
+              <div className="org-box org-sub" style={{ fontSize: '.78rem', minWidth: 0 }}>
+                <strong>Bước 3:</strong> Cổ đông lớn được ủy quyền quản lý
+              </div>
+              <div className="org-arrow-down">↓</div>
+              <div className="org-box org-small" style={{ fontSize: '.78rem', minWidth: 0 }}>
+                ✅ Nhóm nhỏ kiểm soát công ty lớn
+              </div>
+            </div>
+          </div>
+          <div>
+            <p className="slide-col-head">Ví dụ minh họa</p>
+            <div className="org-box org-main" style={{ fontSize: '.8rem', minWidth: 0, marginBottom: '.8rem', textAlign: 'left' }}>
+              <strong>Công ty ABC – vốn 1 tỷ USD</strong>
+              <br /><small>👥 10 triệu cổ đông nhỏ = 70% (rời rạc, không quản lý)</small>
+              <br /><small>👤 1 đại cổ đông = 30% (tập trung, có quyền)</small>
+              <br /><small style={{ color: '#4ade80', fontWeight: 600 }}>→ Đại cổ đông kiểm soát toàn bộ</small>
+            </div>
+            <p className="slide-col-head">Phương thức kiểm soát</p>
+            <ul className="slide-bullets">
+              <li><strong>Trực tiếp:</strong> nắm cổ phần chi phối, bổ nhiệm ban lãnh đạo</li>
+              <li><strong>Gián tiếp:</strong> qua ngân hàng, tín dụng, thị trường chứng khoán</li>
+            </ul>
+          </div>
+        </div>
+        <div className="speaker-note">
+          🎤 <strong>Nói:</strong> Cơ chế tham dự là cách tập đoàn tài chính kiểm soát doanh nghiệp qua cổ phiếu. Chỉ cần nắm 30% cổ phần – trong khi hàng triệu cổ đông nhỏ không tham gia quản lý – một nhóm nhỏ đã có thể điều hành toàn bộ công ty.
+        </div>
+      </div>
+
+      {/* Slide 4: Biểu hiện 3 */}
+      <div className="card">
+        <h4 style={{ margin: '0 0 .6rem', color: 'var(--sky)' }}>🌐 3. Ngân hàng đa quốc gia và xuyên quốc gia</h4>
+        <div className="slide-two-col">
+          <div>
+            <p className="slide-col-head">Ví dụ ngân hàng toàn cầu</p>
+            <ul className="slide-bullets">
+              <li><strong>HSBC (Anh):</strong> 64 quốc gia · 40 triệu khách hàng · tài sản $3 nghìn tỷ</li>
+              <li><strong>Citigroup (Mỹ):</strong> 160 quốc gia · 200 triệu tài khoản</li>
+              <li><strong>BNP Paribas (Pháp):</strong> ngân hàng lớn nhất châu Âu · 72 quốc gia</li>
+            </ul>
+          </div>
+          <div>
+            <p className="slide-col-head">🏙️ Trung tâm tài chính thế giới</p>
+            <div className="slide-examples">
+              <span>🗽 New York</span>
+              <span>🇬🇧 London</span>
+              <span>🇭🇰 Hong Kong</span>
+              <span>🇸🇬 Singapore</span>
+              <span>🗼 Tokyo</span>
+            </div>
+            <p className="slide-col-head" style={{ marginTop: '.9rem' }}>Vai trò</p>
+            <ul className="slide-bullets">
+              <li>Giao dịch ngoại hối</li>
+              <li>Thị trường chứng khoán quốc tế</li>
+              <li>Phát hành trái phiếu quốc tế</li>
+              <li>Các sản phẩm tài chính phức tạp</li>
+            </ul>
+          </div>
+        </div>
+        <div className="speaker-note">
+          🎤 <strong>Nói:</strong> Biểu hiện thứ ba là các ngân hàng lớn đã vươn ra toàn cầu. HSBC có mặt tại 64 quốc gia, Citigroup tại 160 quốc gia. Các hoạt động tài chính lớn thường tập trung ở những trung tâm tài chính như New York, London, Hong Kong và Singapore.
+        </div>
+      </div>
+
+      {/* Slide 5: Sơ đồ + Câu kết */}
+      <div className="card">
+        <h3>3️⃣ Sơ đồ minh họa</h3>
+        <div className="org-chart">
+          <div className="org-top">
+            <div className="org-box org-main">💰 Tư bản tài chính</div>
+          </div>
+          <div className="org-arrow-down">↓</div>
+          <div className="org-mid">
+            <div className="org-box org-sub">🏦 Ngân hàng</div>
+            <div className="org-box org-sub">🏭 Công nghiệp</div>
+            <div className="org-box org-sub">📈 Thị trường tài chính</div>
+          </div>
+          <div className="org-arrow-down">↓</div>
+          <div className="org-bottom">
+            <div className="org-box org-small">🏛️ Tập đoàn tài chính lớn</div>
+          </div>
+          <div className="org-arrow-down">↓</div>
+          <div className="org-final">
+            <div className="org-box org-chain">🌐 Hoạt động toàn cầu</div>
+          </div>
+        </div>
+        <div className="speaker-note">
+          🎤 <strong>Câu kết:</strong> Tóm lại, tư bản tài chính ngày càng đóng vai trò quan trọng trong nền kinh tế. Các tập đoàn tài chính không chỉ kiểm soát ngân hàng mà còn liên kết với nhiều ngành kinh tế khác và mở rộng hoạt động trên phạm vi toàn cầu.
+        </div>
+      </div>
 
       <ImageGallery
         title="🏦 Các tập đoàn Tài chính lớn nhất thế giới"
@@ -950,154 +1150,6 @@ function TaiChinhSection() {
           { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Vanguard_Logo.svg/320px-Vanguard_Logo.svg.png', label: 'Vanguard Group', emoji: '⛵' },
         ]}
       />
-
-      <div className="card highlight">
-        <h3>🎯 Khái niệm</h3>
-        <p>
-          Tư bản tài chính là sự thống nhất của tư bản ngân hàng và tư bản công nghiệp,
-          nắm trong tay các nhà tư bản tài chính và các tập đoàn tài chính.
-        </p>
-      </div>
-
-      {/* Biểu hiện 1 */}
-      <div className="card">
-        <h3>📊 1. Mở rộng phạm vi liên kết</h3>
-
-        <div className="definition">
-          Liên kết đa dạng: Công - Nông - Thương - Tín - Dịch vụ
-        </div>
-
-        <div className="example-box">
-          <h4>📌 Ví dụ thực tế:</h4>
-          <ul>
-            <li>
-              <strong>JP Morgan Chase (Mỹ):</strong>
-              <ul>
-                <li>Ngân hàng đầu tư</li>
-                <li>Quản lý tài sản ($3.2 nghìn tỷ)</li>
-                <li>Ngân hàng thương mại</li>
-                <li>Thẻ tín dụng</li>
-                <li>Quỹ đầu tư</li>
-              </ul>
-            </li>
-            <li>
-              <strong>ICBC (Trung Quốc):</strong> Ngân hàng lớn nhất thế giới,
-              liên kết với công nghiệp, bất động sản, bảo hiểm
-            </li>
-          </ul>
-        </div>
-
-        <div className="trend-box">
-          <h4>📈 Xu hướng mới:</h4>
-          <ul>
-            <li>🏥 Dịch vụ y tế + tài chính</li>
-            <li>🌾 Nông nghiệp công nghệ cao + ngân hàng</li>
-            <li>⚡ Năng lượng xanh + đầu tư</li>
-            <li>📱 Fintech (công nghệ tài chính)</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Biểu hiện 2 */}
-      <div className="card">
-        <h3>📜 2. Cơ chế tham dự và ủy nhiệm</h3>
-
-        <div className="mechanism-box">
-          <h4>🔄 Cơ chế hoạt động:</h4>
-          <div className="flow-diagram">
-            <div className="flow-step">
-              <strong>Bước 1:</strong> Phát hành cổ phiếu mệnh giá nhỏ
-            </div>
-            <div className="flow-arrow">↓</div>
-            <div className="flow-step">
-              <strong>Bước 2:</strong> Nhiều tầng lớp dân cư mua cổ phiếu
-            </div>
-            <div className="flow-arrow">↓</div>
-            <div className="flow-step">
-              <strong>Bước 3:</strong> Đại cổ đông được "ủy nhiệm"
-            </div>
-            <div className="flow-arrow">↓</div>
-            <div className="flow-step">
-              <strong>Kết quả:</strong> Kiểm soát công ty với số vốn nhỏ
-            </div>
-          </div>
-        </div>
-
-        <div className="example-box">
-          <h4>📌 Ví dụ minh họa:</h4>
-          <div className="calculation-box">
-            <p><strong>Công ty ABC có vốn 1 tỷ USD:</strong></p>
-            <ul>
-              <li>👥 10 triệu cổ đông nhỏ: 70% cổ phần (rời rạc)</li>
-              <li>👤 1 đại cổ đông: 30% cổ phần (tập trung)</li>
-              <li>✅ Kết quả: Đại cổ đông kiểm soát công ty với chỉ 300 triệu USD</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="method-box">
-          <h4>🎯 Phương thức kiểm soát:</h4>
-          <ul>
-            <li><strong>Trực tiếp:</strong> Nắm cổ phần chi phối, bổ nhiệm ban lãnh đạo</li>
-            <li><strong>Gián tiếp:</strong> Thao túng thị trường tài chính, tín dụng</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Biểu hiện 3 */}
-      <div className="card">
-        <h3>🌐 3. Ngân hàng Đa quốc gia và Xuyên quốc gia</h3>
-
-        <div className="example-box">
-          <h4>📌 Ví dụ các ngân hàng toàn cầu:</h4>
-          <ul>
-            <li>
-              <strong>HSBC (Anh):</strong>
-              <ul>
-                <li>Hoạt động tại 64 quốc gia</li>
-                <li>40 triệu khách hàng</li>
-                <li>Tổng tài sản: $3 nghìn tỷ</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Citigroup (Mỹ):</strong>
-              <ul>
-                <li>Có mặt tại 160+ quốc gia</li>
-                <li>200 triệu tài khoản</li>
-              </ul>
-            </li>
-            <li>
-              <strong>BNP Paribas (Pháp):</strong> Ngân hàng lớn nhất châu Âu,
-              hoạt động tại 72 quốc gia
-            </li>
-          </ul>
-        </div>
-
-        <div className="center-box">
-          <h4>🏙️ Các trung tâm tài chính thế giới:</h4>
-          <div className="two-columns">
-            <div>
-              <strong>🥇 Top 5 trung tâm:</strong>
-              <ul>
-                <li>🗽 New York (Phố Wall)</li>
-                <li>🇬🇧 London (City of London)</li>
-                <li>🇭🇰 Hong Kong</li>
-                <li>🇸🇬 Singapore</li>
-                <li>🗼 Tokyo</li>
-              </ul>
-            </div>
-            <div>
-              <strong>📊 Vai trò:</strong>
-              <ul>
-                <li>Giao dịch ngoại hối</li>
-                <li>Thị trường chứng khoán</li>
-                <li>Trái phiếu quốc tế</li>
-                <li>Phái sinh tài chính</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }
