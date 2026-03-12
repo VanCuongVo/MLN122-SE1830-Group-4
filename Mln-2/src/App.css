@@ -855,6 +855,597 @@ ul li::before {
   }
 }
 
+/* ── XuatKhau / ThiTruong / LanhTho Sections ── */
+
+/* Feature cards */
+.xk-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .7rem;
+  margin: .8rem 0;
+}
+
+.xk-feat-card {
+  background: rgba(255, 255, 255, .05);
+  border: 1.5px solid rgba(255, 255, 255, .1);
+  border-radius: 12px;
+  padding: .9rem .75rem;
+  text-align: center;
+  transition: background .2s;
+}
+
+.xk-feat-card:hover {
+  background: rgba(21, 101, 192, .15);
+}
+
+.xk-feat-icon {
+  font-size: 1.6rem;
+  margin-bottom: .3rem;
+}
+
+.xk-feat-title {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: .2rem;
+}
+
+.xk-feat-sub {
+  font-size: .72rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Model grid (BOT/BT/FDI) */
+.xk-model-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .75rem;
+  margin: .8rem 0;
+}
+
+.xk-model-card {
+  background: rgba(255, 255, 255, .04);
+  border: 1.5px solid rgba(255, 255, 255, .1);
+  border-radius: 14px;
+  padding: 1rem .85rem;
+}
+
+.xk-model-tag {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  padding: .2rem .65rem;
+  border-radius: 20px;
+  border: 1.5px solid transparent;
+  margin-bottom: .5rem;
+}
+
+.xk-model-name {
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: .3rem;
+}
+
+.xk-model-desc {
+  font-size: .78rem;
+  color: rgba(220, 230, 240, .65);
+  line-height: 1.45;
+  margin-bottom: .45rem;
+}
+
+.xk-model-ex {
+  font-size: .74rem;
+  color: var(--sky);
+  opacity: .85;
+  line-height: 1.4;
+}
+
+/* Case study */
+.xk-case {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: rgba(255, 255, 255, .04);
+  border: 1.5px solid rgba(66, 165, 245, .25);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  margin: .5rem 0;
+}
+
+.xk-case-logo {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  line-height: 1.3;
+  text-align: center;
+  min-width: 56px;
+}
+
+.xk-case-title {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: .5rem;
+}
+
+.xk-case-why-label {
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--sky);
+  display: block;
+  margin-bottom: .3rem;
+}
+
+/* Alliance grid (ThiTruong) */
+.tht-alliance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .75rem;
+  margin: .8rem 0;
+}
+
+.tht-alliance-card {
+  border: 1.5px solid transparent;
+  border-radius: 14px;
+  padding: 1rem .85rem;
+  background: rgba(255, 255, 255, .04);
+}
+
+.tht-alliance-flag {
+  font-size: 1.5rem;
+  margin-bottom: .3rem;
+}
+
+.tht-alliance-name {
+  font-size: .88rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+/* Dependency chain (LanhTho) */
+.ldt-dep-chain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin: .8rem 0;
+}
+
+.ldt-dep-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, .05);
+  border: 1.5px solid rgba(255, 255, 255, .1);
+  border-radius: 12px;
+  padding: .7rem 1.4rem;
+  min-width: 280px;
+  text-align: center;
+  transition: background .2s;
+}
+
+.ldt-dep-step:hover {
+  background: rgba(21, 101, 192, .15);
+}
+
+.ldt-dep-icon {
+  font-size: 1.3rem;
+  margin-bottom: .15rem;
+}
+
+.ldt-dep-label {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--sky);
+  margin-bottom: .1rem;
+}
+
+.ldt-dep-sub {
+  font-size: .72rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.ldt-dep-arrow {
+  font-size: 1.2rem;
+  color: rgba(220, 230, 240, .3);
+  line-height: 1.6;
+}
+
+/* Conflict grid (LanhTho) */
+.ldt-conflict-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .7rem;
+  margin: .8rem 0;
+}
+
+.ldt-conflict-card {
+  border: 1.5px solid transparent;
+  border-radius: 14px;
+  padding: 1rem .85rem;
+  background: rgba(255, 255, 255, .04);
+  text-align: center;
+}
+
+.ldt-conflict-icon {
+  font-size: 1.8rem;
+  margin-bottom: .3rem;
+}
+
+.ldt-conflict-title {
+  font-size: .85rem;
+  font-weight: 700;
+  margin-bottom: .3rem;
+}
+
+.ldt-conflict-desc {
+  font-size: .75rem;
+  color: rgba(220, 230, 240, .6);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .xk-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .xk-model-grid,
+  .tht-alliance-grid,
+  .ldt-conflict-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .xk-case {
+    flex-direction: column;
+    gap: .6rem;
+  }
+}
+
+/* ── TichTu Section ── */
+.tt-compare {
+  display: flex;
+  align-items: stretch;
+  gap: .75rem;
+  margin: .8rem 0;
+  flex-wrap: wrap;
+}
+
+.tt-compare-col {
+  flex: 1;
+  min-width: 160px;
+  border-radius: 12px;
+  padding: .85rem 1rem;
+}
+
+.tt-before {
+  background: rgba(229, 57, 53, .1);
+  border: 1.5px solid rgba(229, 57, 53, .3);
+}
+
+.tt-after {
+  background: rgba(21, 101, 192, .15);
+  border: 1.5px solid rgba(66, 165, 245, .4);
+}
+
+.tt-compare-label {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  margin-bottom: .5rem;
+}
+
+.tt-compare-arrow {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: rgba(220, 230, 240, .3);
+  font-weight: 700;
+  padding: 0 .1rem;
+}
+
+/* Corp cards */
+.tt-grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .7rem;
+  margin: .8rem 0;
+}
+
+.tt-grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .7rem;
+  margin: .8rem 0;
+}
+
+.tt-corp-card {
+  border: 1.5px solid transparent;
+  border-radius: 12px;
+  padding: .85rem .75rem;
+  background: rgba(255, 255, 255, .04);
+  text-align: center;
+  transition: transform .2s;
+}
+
+.tt-corp-card:hover {
+  transform: translateY(-2px);
+}
+
+.tt-corp-flag {
+  font-size: 1.5rem;
+  margin-bottom: .2rem;
+}
+
+.tt-corp-name {
+  font-size: .85rem;
+  font-weight: 700;
+  margin-bottom: .15rem;
+}
+
+.tt-corp-sub {
+  font-size: .72rem;
+  color: var(--muted);
+  margin-bottom: .2rem;
+}
+
+.tt-corp-fields {
+  font-size: .72rem;
+  color: rgba(220, 230, 240, .6);
+  line-height: 1.45;
+}
+
+/* Feature row */
+.tt-features {
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin-top: .8rem;
+}
+
+.tt-feat {
+  flex: 1;
+  min-width: 180px;
+  padding: .5rem .85rem;
+  border-radius: 8px;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+.tt-feat-ok {
+  background: rgba(67, 160, 71, .14);
+  border: 1px solid rgba(67, 160, 71, .35);
+  color: #a5d6a7;
+}
+
+.tt-feat-warn {
+  background: rgba(251, 140, 0, .14);
+  border: 1px solid rgba(251, 140, 0, .35);
+  color: #ffcc80;
+}
+
+/* Supply chain cards */
+.tt-supply-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .7rem;
+  margin: .8rem 0;
+}
+
+.tt-supply-card {
+  border: 1.5px solid transparent;
+  border-radius: 14px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.tt-supply-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .3);
+}
+
+.tt-supply-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: .5rem;
+  background: rgba(255, 255, 255, .08);
+  padding: .4rem;
+}
+
+.tt-supply-corp {
+  font-size: .9rem;
+  font-weight: 800;
+  margin-bottom: .25rem;
+  letter-spacing: .01em;
+}
+
+.tt-supply-stat {
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+}
+
+.tt-supply-desc {
+  font-size: .74rem;
+  color: rgba(220, 230, 240, .65);
+  margin-top: .25rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+
+  .tt-grid3,
+  .tt-supply-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tt-grid4 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── Intro Formula ── */
+.intro-formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.intro-formula-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .25rem;
+  background: rgba(255, 255, 255, .06);
+  border: 1.5px solid rgba(255, 255, 255, .12);
+  border-radius: 12px;
+  padding: .75rem 1.1rem;
+  font-size: .82rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+  min-width: 110px;
+  line-height: 1.4;
+}
+
+.intro-formula-box.accent {
+  background: rgba(21, 101, 192, .22);
+  border-color: rgba(66, 165, 245, .45);
+  color: #90caf9;
+}
+
+.intro-formula-op {
+  font-size: 1.4rem;
+  color: rgba(220, 230, 240, .4);
+  font-weight: 700;
+  user-select: none;
+}
+
+/* ── Five Signs Grid ── */
+.five-signs-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .7rem;
+  margin: .8rem 0;
+}
+
+.five-signs-item {
+  background: rgba(255, 255, 255, .05);
+  border: 1.5px solid rgba(255, 255, 255, .1);
+  border-radius: 12px;
+  padding: .85rem .7rem;
+  text-align: center;
+  transition: background .2s, border-color .2s;
+}
+
+.five-signs-item:hover {
+  background: rgba(21, 101, 192, .18);
+  border-color: rgba(66, 165, 245, .4);
+}
+
+.five-signs-num {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--sky);
+  margin-bottom: .2rem;
+}
+
+.five-signs-icon {
+  font-size: 1.5rem;
+  margin-bottom: .3rem;
+}
+
+.five-signs-title {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  margin-bottom: .3rem;
+}
+
+.five-signs-sub {
+  font-size: .72rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+@media (max-width: 768px) {
+  .five-signs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .five-signs-grid .five-signs-item:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ── BigTech Grid ── */
+.bigtech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .75rem;
+  margin: .8rem 0;
+}
+
+.bigtech-card {
+  border: 1.5px solid transparent;
+  border-radius: 14px;
+  padding: 1rem .85rem;
+  text-align: center;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.bigtech-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+}
+
+.bigtech-logo {
+  font-size: 2rem;
+  margin-bottom: .3rem;
+}
+
+.bigtech-name {
+  font-size: .95rem;
+  font-weight: 800;
+  margin-bottom: .3rem;
+}
+
+.bigtech-fields {
+  font-size: .72rem;
+  color: rgba(220, 230, 240, .6);
+  line-height: 1.45;
+  margin-bottom: .5rem;
+}
+
+.bigtech-stat {
+  font-size: .73rem;
+  font-weight: 600;
+  color: rgba(220, 230, 240, .85);
+  background: rgba(0, 0, 0, .18);
+  border-radius: 8px;
+  padding: .3rem .5rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .bigtech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ── Org Chart ── */
 .org-chart {
   display: flex;

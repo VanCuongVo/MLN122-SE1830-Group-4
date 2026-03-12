@@ -805,114 +805,72 @@ function IntroSection() {
       <div className="card highlight">
         <h3>1️⃣ Khái niệm</h3>
         <p>
-          <strong>Độc quyền</strong> là sự tập trung sản xuất và tư bản ở mức độ cao, hình thành
-          các tập đoàn kinh tế lớn có khả năng <strong>chi phối thị trường và nền kinh tế</strong>.
+          <strong>Độc quyền</strong> là sự tập trung sản xuất và tư bản ở mức cao, hình thành các tập đoàn kinh tế lớn có khả năng <strong>chi phối thị trường và nền kinh tế</strong>.
         </p>
-        <p style={{ marginTop: '.6rem' }}>
-          Trong thời đại hiện nay, độc quyền không chỉ tồn tại trong phạm vi quốc gia mà còn
-          mở rộng ra toàn cầu, gắn với sự phát triển của <strong>khoa học công nghệ</strong> và{' '}
-          <strong>toàn cầu hóa kinh tế</strong>.
+        <p style={{ marginTop: '.5rem', color: 'var(--muted)', fontSize: '.92rem' }}>
+          Ngày nay, độc quyền vượt ra ngoài biên giới quốc gia — gắn liền với <strong>khoa học công nghệ</strong> và <strong>toàn cầu hóa</strong>.
         </p>
-        <div className="slide-examples" style={{ marginTop: '.8rem' }}>
-          <span>🏭 Tập trung sản xuất</span>
-          <span style={{ background: 'none', border: 'none', color: 'var(--text)' }}>➕</span>
-          <span>💰 Tập trung tư bản</span>
-          <span style={{ background: 'none', border: 'none', color: 'var(--text)' }}>➡️</span>
-          <span>🏛️ Tập đoàn chi phối kinh tế</span>
+        <div className="intro-formula">
+          <div className="intro-formula-box">🏭<br /><span>Tập trung<br />sản xuất</span></div>
+          <div className="intro-formula-op">＋</div>
+          <div className="intro-formula-box">💰<br /><span>Tập trung<br />tư bản</span></div>
+          <div className="intro-formula-op">→</div>
+          <div className="intro-formula-box accent">🏛️<br /><span>Tập đoàn<br />chi phối kinh tế</span></div>
         </div>
-
       </div>
 
-      {/* Slide 2: Biểu hiện chính */}
+      {/* Slide 2: 5 Biểu hiện */}
       <div className="card">
-        <h3>2️⃣ Biểu hiện chính của độc quyền hiện đại</h3>
-        <div className="slide-two-col">
-          <div>
-            <ul className="slide-bullets">
-              <li>
-                <strong>1️⃣ Tích tụ và tập trung tư bản</strong>
-                <br /><span style={{ color: 'rgba(220,230,240,.6)', fontSize: '.8rem' }}>→ Hình thành tập đoàn kinh tế lớn và đa ngành</span>
-              </li>
-              <li>
-                <strong>2️⃣ Vai trò của tư bản tài chính</strong>
-                <br /><span style={{ color: 'rgba(220,230,240,.6)', fontSize: '.8rem' }}>→ Kết hợp ngân hàng + công nghiệp, kiểm soát qua cổ phiếu</span>
-              </li>
-              <li>
-                <strong>3️⃣ Xuất khẩu tư bản</strong>
-                <br /><span style={{ color: 'rgba(220,230,240,.6)', fontSize: '.8rem' }}>→ Các nước phát triển đầu tư vốn ra nước ngoài (FDI)</span>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul className="slide-bullets">
-              <li>
-                <strong>4️⃣ Phân chia thị trường thế giới</strong>
-                <br /><span style={{ color: 'rgba(220,230,240,.6)', fontSize: '.8rem' }}>→ Tập đoàn lớn cạnh tranh và chiếm lĩnh thị trường toàn cầu</span>
-              </li>
-              <li>
-                <strong>5️⃣ Phân chia phạm vi ảnh hưởng</strong>
-                <br /><span style={{ color: 'rgba(220,230,240,.6)', fontSize: '.8rem' }}>→ Cường quốc và tập đoàn mở rộng ảnh hưởng kinh tế – tài chính</span>
-              </li>
-            </ul>
-            <div className="speaker-note" style={{ marginTop: '.8rem' }}>
-              💡 <strong>Mẹo:</strong> Slide chỉ ghi từ khóa. Khi nói thì giải thích thêm ví dụ.
+        <h3>2️⃣ 5 Biểu hiện chính của Độc quyền hiện đại</h3>
+        <div className="five-signs-grid">
+          {[
+            { num: '①', icon: '🏢', title: 'Tích tụ & tập trung tư bản', sub: 'Tập đoàn đa ngành, đa quốc gia' },
+            { num: '②', icon: '💳', title: 'Tư bản tài chính', sub: 'Ngân hàng + Công nghiệp, kiểm soát qua cổ phiếu' },
+            { num: '③', icon: '✈️', title: 'Xuất khẩu tư bản', sub: 'FDI — vốn chảy ra nước ngoài' },
+            { num: '④', icon: '🗺️', title: 'Phân chia thị trường thế giới', sub: 'TNCs chiếm lĩnh thị trường toàn cầu' },
+            { num: '⑤', icon: '🌐', title: 'Phân chia phạm vi ảnh hưởng', sub: 'Cường quốc & tập đoàn mở rộng tầm ảnh hưởng' },
+          ].map(item => (
+            <div key={item.num} className="five-signs-item">
+              <div className="five-signs-num">{item.num}</div>
+              <div className="five-signs-icon">{item.icon}</div>
+              <div className="five-signs-title">{item.title}</div>
+              <div className="five-signs-sub">{item.sub}</div>
             </div>
-          </div>
+          ))}
         </div>
         <div className="speaker-note">
-          🎤 <strong>Nói:</strong> Độc quyền hiện đại có 5 biểu hiện chính. Mỗi biểu hiện sẽ được nhóm em trình bày chi tiết ở các phần sau. Ở đây em chỉ giới thiệu tổng quan để thầy/cô và các bạn có cái nhìn toàn cảnh trước.
+          🎤 <strong>Nói:</strong> Mỗi biểu hiện sẽ được trình bày chi tiết ở các phần sau. Đây là bức tranh tổng thể để nắm toàn cảnh trước.
         </div>
       </div>
 
-      {/* Slide 3: Ví dụ thực tế */}
+      {/* Slide 3: Ví dụ thực tế — Big Tech */}
       <div className="card">
-        <h3>3️⃣ Ví dụ thực tế — Các tập đoàn độc quyền lớn</h3>
-        <div className="slide-two-col">
-          <div>
-            <p className="slide-col-head">Công nghệ số</p>
-            <ul className="slide-bullets">
-              <li>
-                <strong>Google (Alphabet):</strong>
-                <br /><span style={{ color: 'rgba(220,230,240,.6)', fontSize: '.8rem' }}>tìm kiếm · quảng cáo · cloud · AI · YouTube · Android</span>
-                <br /><a href="https://en.wikipedia.org/wiki/Alphabet_Inc." target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a>
-              </li>
-              <li>
-                <strong>Amazon:</strong>
-                <br /><span style={{ color: 'rgba(220,230,240,.6)', fontSize: '.8rem' }}>thương mại điện tử · AWS cloud · logistics · truyền thông</span>
-                <br /><a href="https://en.wikipedia.org/wiki/Amazon_(company)" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a>
-              </li>
-              <li>
-                <strong>Microsoft:</strong>
-                <br /><span style={{ color: 'rgba(220,230,240,.6)', fontSize: '.8rem' }}>phần mềm · cloud Azure · gaming · LinkedIn · OpenAI</span>
-                <br /><a href="https://en.wikipedia.org/wiki/Microsoft" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a>
-              </li>
-              <li>
-                <strong>Apple:</strong>
-                <br /><span style={{ color: 'rgba(220,230,240,.6)', fontSize: '.8rem' }}>thiết bị · App Store · dịch vụ tài chính · streaming</span>
-                <br /><a href="https://en.wikipedia.org/wiki/Apple_Inc." target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="slide-col-head">Tại sao đây là độc quyền?</p>
-            <ul className="slide-bullets">
-              <li>Google chiếm <strong>~92%</strong> thị phần tìm kiếm toàn cầu&nbsp;<a href="https://gs.statcounter.com/search-engine-market-share" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 statcounter.com</a></li>
-              <li>Amazon chiếm <strong>~38%</strong> thị phần thương mại điện tử Mỹ&nbsp;<a href="https://en.wikipedia.org/wiki/Amazon_(company)" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a></li>
-              <li>Microsoft + Google kiểm soát <strong>~60%</strong> thị trường cloud&nbsp;<a href="https://en.wikipedia.org/wiki/Cloud_computing#Providers" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a></li>
-              <li>Apple thu về <strong>~85%</strong> lợi nhuận toàn bộ ngành smartphone&nbsp;<a href="https://en.wikipedia.org/wiki/Apple_Inc." target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a></li>
-            </ul>
-            <div className="slide-examples" style={{ marginTop: '.8rem' }}>
-              <span>📊 Thị phần khổng lồ</span>
-              <span>🌐 Hoạt động toàn cầu</span>
-              <span>💰 Lợi nhuận cực lớn</span>
+        <h3>3️⃣ Minh chứng thực tế — Big Tech độc quyền</h3>
+        <div className="bigtech-grid">
+          {[
+            { logo: '🔍', name: 'Google', color: '#4285F4', bg: 'rgba(66,133,244,.12)', fields: 'Tìm kiếm · Quảng cáo · Cloud · AI · YouTube', stat: '~92% thị phần tìm kiếm toàn cầu' },
+            { logo: '📦', name: 'Amazon', color: '#FF9900', bg: 'rgba(255,153,0,.12)', fields: 'Thương mại điện tử · AWS · Logistics', stat: '~38% thị phần TMĐT tại Mỹ' },
+            { logo: '💻', name: 'Microsoft', color: '#00BCF2', bg: 'rgba(0,188,242,.12)', fields: 'Phần mềm · Azure · LinkedIn · OpenAI', stat: '~60% thị trường Cloud (cùng Google)' },
+            { logo: '🍎', name: 'Apple', color: '#aaa', bg: 'rgba(180,180,180,.12)', fields: 'Thiết bị · App Store · Dịch vụ tài chính', stat: '~85% lợi nhuận ngành smartphone' },
+          ].map(t => (
+            <div key={t.name} className="bigtech-card" style={{ borderColor: t.color, background: t.bg }}>
+              <div className="bigtech-logo" style={{ color: t.color }}>{t.logo}</div>
+              <div className="bigtech-name" style={{ color: t.color }}>{t.name}</div>
+              <div className="bigtech-fields">{t.fields}</div>
+              <div className="bigtech-stat">📊 {t.stat}</div>
             </div>
-          </div>
+          ))}
+        </div>
+        <div className="slide-examples" style={{ marginTop: '.8rem' }}>
+          <span>📊 Thị phần khổng lồ</span>
+          <span>🌐 Hoạt động toàn cầu</span>
+          <span>💰 Lợi nhuận cực lớn</span>
         </div>
       </div>
 
-      {/* Slide 4: Sơ đồ minh họa */}
+      {/* Slide 4: Sơ đồ + Đặc điểm */}
       <div className="card">
-        <h3>4️⃣ Sơ đồ minh họa — Độc quyền hiện đại</h3>
+        <h3>4️⃣ Cấu trúc & Đặc điểm thời đại mới</h3>
         <div className="org-chart">
           <div className="org-top">
             <div className="org-box org-main">🏛️ Độc quyền hiện đại</div>
@@ -933,7 +891,7 @@ function IntroSection() {
           </div>
         </div>
 
-        <p className="slide-col-head" style={{ marginTop: '1rem' }}>📊 Đặc điểm của độc quyền thời đại mới</p>
+        <p className="slide-col-head" style={{ marginTop: '1.1rem', marginBottom: '.5rem' }}>📊 Đặc điểm nổi bật thời đại mới</p>
         <div className="slide-examples">
           <span>🌐 Toàn cầu hóa</span>
           <span>💻 Cách mạng KH-CN</span>
@@ -942,8 +900,8 @@ function IntroSection() {
           <span>📱 Kinh tế số</span>
         </div>
 
-        <div className="speaker-note">
-          🎤 <strong>Câu kết:</strong> Tóm lại, độc quyền trong thời đại mới không còn giới hạn trong một quốc gia hay một ngành. Các tập đoàn lớn liên kết với tư bản tài chính, vươn ra toàn cầu và chi phối cả nền kinh tế thế giới. Đây là cơ sở để chúng ta hiểu các phần tiếp theo.
+        <div className="speaker-note" style={{ marginTop: '.9rem' }}>
+          🎤 <strong>Kết:</strong> Độc quyền thời đại mới không còn bó hẹp trong một ngành hay một quốc gia. Tập đoàn lớn kết hợp tư bản tài chính, vươn ra toàn cầu và chi phối cả nền kinh tế thế giới — đó là nền tảng để hiểu các nội dung tiếp theo.
         </div>
       </div>
 
@@ -969,18 +927,34 @@ function TichTuSection() {
 
       {/* Slide 1 – Tổng quan */}
       <div className="card highlight">
-        <h3>📌 Nội dung chính</h3>
-        <ul className="slide-bullets">
-          <li>Trước đây, doanh nghiệp chủ yếu phát triển trong <strong>một ngành</strong>, <strong>một quốc gia</strong></li>
-          <li>Ngày nay, do toàn cầu hóa và công nghệ, các tập đoàn mở rộng ra <strong>nhiều ngành – nhiều quốc gia</strong></li>
-          <li>Xuất hiện hình thức tổ chức độc quyền mới: <strong>Concern</strong> và <strong>Conglomerate</strong></li>
-          <li>Doanh nghiệp vừa và nhỏ vẫn tồn tại nhưng <strong>liên kết, phụ thuộc</strong> tập đoàn lớn&nbsp;<a href="https://kinhtetieudung.vn/khi-doanh-nghiep-nho-dong-vai-tro-lon-trong-nen-kinh-te-a22512.html" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 kinhtetieudung.vn</a></li>
-        </ul>
-        <div className="slide-examples">
-          <span>Samsung</span><span>Berkshire Hathaway</span><span>Toyota Group</span><span>Vingroup</span>
+        <h3>📌 Bức tranh toàn cảnh</h3>
+        <div className="tt-compare">
+          <div className="tt-compare-col tt-before">
+            <div className="tt-compare-label">Trước đây</div>
+            <ul className="slide-bullets">
+              <li>Hoạt động trong <strong>1 ngành</strong></li>
+              <li>Bó hẹp trong <strong>1 quốc gia</strong></li>
+              <li>Quy mô nhỏ, ít liên kết</li>
+            </ul>
+          </div>
+          <div className="tt-compare-arrow">→</div>
+          <div className="tt-compare-col tt-after">
+            <div className="tt-compare-label">Ngày nay</div>
+            <ul className="slide-bullets">
+              <li>Mở rộng <strong>nhiều ngành</strong></li>
+              <li>Hoạt động <strong>xuyên quốc gia</strong></li>
+              <li>Concern · Conglomerate · TNCs</li>
+            </ul>
+          </div>
+        </div>
+        <div className="slide-examples" style={{ marginTop: '.8rem' }}>
+          <span>🏢 Concern</span>
+          <span>💼 Conglomerate</span>
+          <span>🏪 DN vừa & nhỏ</span>
+          <span>🌏 Nước đang phát triển</span>
         </div>
         <div className="speaker-note">
-          💬 <em>Ngày nay sự tích tụ và tập trung tư bản thể hiện qua sự xuất hiện của các tập đoàn xuyên quốc gia hoạt động ở nhiều ngành và nhiều quốc gia.</em>
+          💬 <em>Tích tụ và tập trung tư bản ngày nay thể hiện qua các tập đoàn xuyên quốc gia hoạt động ở nhiều ngành và nhiều quốc gia.</em>
         </div>
       </div>
 
@@ -988,28 +962,29 @@ function TichTuSection() {
       <div className="card">
         <h3>🏭 Concern — Tập đoàn Đa ngành</h3>
         <div className="definition">
-          <strong>Khái niệm:</strong> Tổ chức độc quyền đa ngành, gồm nhiều công ty hoạt động trong <strong>nhiều lĩnh vực khác nhau</strong> và ở nhiều quốc gia.
+          Tổ chức độc quyền gồm nhiều công ty hoạt động trong <strong>nhiều lĩnh vực khác nhau</strong>, ở nhiều quốc gia.
         </div>
-        <div className="slide-two-col">
-          <div>
-            <p className="slide-col-head">📌 Ví dụ cụ thể</p>
-            <ul className="slide-bullets">
-              <li><strong>Samsung (Hàn Quốc):</strong><br />điện tử · đóng tàu · xây dựng · bảo hiểm · khách sạn<br /><a href="https://timviec365.vn/blog/lich-su-hinh-thanh-samsung-new13516.html" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 timviec365.vn</a></li>
-              <li><strong>General Electric (Mỹ):</strong><br />hàng không · y tế · năng lượng · tài chính<br /><a href="https://www.ge.com/about-us" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 ge.com/about-us</a></li>
-              <li><strong>Siemens (Đức):</strong><br />điện tử · giao thông · y tế · năng lượng<br /><a href="https://www.siemens.com/global/en/company/about.html" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 siemens.com/about</a></li>
-            </ul>
-          </div>
-          <div>
-            <p className="slide-col-head">🔑 Lý do hình thành</p>
-            <ul className="slide-bullets">
-              <li>Cạnh tranh gay gắt — kinh doanh một ngành dễ phá sản</li>
-              <li>Tránh bị hạn chế bởi luật chống độc quyền</li>
-              <li>Đa dạng hóa rủi ro, tối đa hóa lợi nhuận</li>
-            </ul>
-          </div>
+        <div className="tt-grid3">
+          {[
+            { flag: '🇰🇷', name: 'Samsung', fields: 'Điện tử · Đóng tàu · Xây dựng · Bảo hiểm · Khách sạn', color: '#1428A0' },
+            { flag: '🇺🇸', name: 'General Electric', fields: 'Hàng không · Y tế · Năng lượng · Tài chính', color: '#1565c0' },
+            { flag: '🇩🇪', name: 'Siemens', fields: 'Điện tử · Giao thông · Y tế · Năng lượng', color: '#009999' },
+          ].map(c => (
+            <div key={c.name} className="tt-corp-card" style={{ borderColor: c.color }}>
+              <div className="tt-corp-flag">{c.flag}</div>
+              <div className="tt-corp-name" style={{ color: c.color }}>{c.name}</div>
+              <div className="tt-corp-fields">{c.fields}</div>
+            </div>
+          ))}
+        </div>
+        <p className="slide-col-head" style={{ marginTop: '.9rem' }}>🔑 Lý do hình thành</p>
+        <div className="slide-examples">
+          <span>⚔️ Cạnh tranh gay gắt</span>
+          <span>⚖️ Né luật chống độc quyền</span>
+          <span>📊 Đa dạng hóa rủi ro</span>
         </div>
         <div className="speaker-note">
-          💬 <em>Concern là tập đoàn đa ngành. Samsung không chỉ sản xuất điện thoại mà còn hoạt động trong xây dựng, bảo hiểm và đóng tàu — đây chính là biểu hiện của Concern.</em>
+          💬 <em>Samsung không chỉ làm điện thoại — họ còn đóng tàu, xây dựng và bán bảo hiểm. Đó chính là Concern.</em>
         </div>
       </div>
 
@@ -1017,109 +992,99 @@ function TichTuSection() {
       <div className="card">
         <h3>💼 Conglomerate — Tập đoàn Hỗn hợp</h3>
         <div className="definition">
-          <strong>Khái niệm:</strong> Tập đoàn gồm nhiều công ty <strong>không liên quan trực tiếp đến sản xuất</strong>. Chủ yếu kiếm lợi nhuận từ đầu tư tài chính và chứng khoán.
+          Tập đoàn gồm nhiều công ty <strong>không liên quan đến sản xuất</strong> — kiếm lợi từ <strong>đầu tư tài chính & chứng khoán</strong>.
         </div>
-        <div className="slide-two-col">
-          <div>
-            <p className="slide-col-head">📌 Ví dụ cụ thể</p>
-            <ul className="slide-bullets">
-              <li><strong>Berkshire Hathaway (Mỹ — Warren Buffett):</strong><br />bảo hiểm · đường sắt · năng lượng · bán lẻ · công nghệ<br /><a href="https://vi.wikipedia.org/wiki/Berkshire_Hathaway" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 vi.wikipedia.org</a></li>
-              <li><strong>Tata Group (Ấn Độ):</strong><br />ô tô · thép · IT · khách sạn · trà<br /><a href="https://www.tata.com/business" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 tata.com/business</a></li>
-              <li><strong>Alibaba (Trung Quốc):</strong><br />thương mại điện tử · cloud · thanh toán · truyền thông<br /><a href="https://www.alibabagroup.com/en-US/about-alibaba-businesses" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 alibabagroup.com</a></li>
-            </ul>
-          </div>
-          <div>
-            <p className="slide-col-head">⚖️ Đặc điểm</p>
-            <ul className="slide-bullets">
-              <li>✔ Linh hoạt trong đầu tư</li>
-              <li>✔ Dễ chuyển vốn sang lĩnh vực lợi nhuận cao</li>
-              <li>⚠ Dễ bị ảnh hưởng bởi biến động tài chính</li>
-            </ul>
-          </div>
+        <div className="tt-grid3">
+          {[
+            { flag: '🇺🇸', name: 'Berkshire Hathaway', sub: 'Warren Buffett', fields: 'Bảo hiểm · Đường sắt · Năng lượng · Bán lẻ', color: '#b45309' },
+            { flag: '🇮🇳', name: 'Tata Group', sub: 'Ấn Độ', fields: 'Ô tô · Thép · IT · Khách sạn · Trà', color: '#7c3aed' },
+            { flag: '🇨🇳', name: 'Alibaba', sub: 'Trung Quốc', fields: 'TMĐT · Cloud · Thanh toán · Truyền thông', color: '#f97316' },
+          ].map(c => (
+            <div key={c.name} className="tt-corp-card" style={{ borderColor: c.color }}>
+              <div className="tt-corp-flag">{c.flag}</div>
+              <div className="tt-corp-name" style={{ color: c.color }}>{c.name}</div>
+              <div className="tt-corp-sub">{c.sub}</div>
+              <div className="tt-corp-fields">{c.fields}</div>
+            </div>
+          ))}
+        </div>
+        <div className="tt-features">
+          <div className="tt-feat tt-feat-ok">✔ Linh hoạt chuyển vốn sang ngành lợi nhuận cao</div>
+          <div className="tt-feat tt-feat-warn">⚠ Dễ bị ảnh hưởng bởi biến động tài chính</div>
         </div>
         <div className="speaker-note">
-          💬 <em>Khác với Concern, Conglomerate gồm các công ty không liên quan đến sản xuất — Berkshire Hathaway sở hữu cả công ty bảo hiểm lẫn đường sắt, những thứ hoàn toàn khác nhau.</em>
+          💬 <em>Berkshire Hathaway sở hữu cả bảo hiểm lẫn đường sắt — hai thứ không liên quan nhau. Đó là Conglomerate.</em>
         </div>
       </div>
 
       {/* Slide 4 – DNVVN */}
       <div className="card">
-        <h3>🏪 Vai trò của Doanh nghiệp Vừa và Nhỏ</h3>
-        <p style={{ fontSize: '.9rem', color: 'var(--text)', marginBottom: '.8rem' }}>
-          Trong nền kinh tế hiện nay, doanh nghiệp vừa và nhỏ vẫn phát triển mạnh — nhưng thường <strong>liên kết hoặc phụ thuộc</strong> vào các tập đoàn lớn.
+        <h3>🏪 Doanh nghiệp Vừa và Nhỏ trong Chuỗi Cung ứng</h3>
+        <p style={{ fontSize: '.9rem', marginBottom: '.8rem' }}>
+          Không biến mất — doanh nghiệp nhỏ <strong>liên kết và phụ thuộc</strong> vào tập đoàn lớn, trở thành mắt xích sản xuất toàn cầu.
         </p>
-        <div className="slide-two-col">
-          <div>
-            <p className="slide-col-head">🔍 Nguyên nhân phát triển</p>
-            <ul className="slide-bullets">
-              <li>Công nghệ giúp chuyên môn hóa sản xuất</li>
-              <li>Tập đoàn lớn không tự làm tất cả → hợp tác với doanh nghiệp nhỏ</li>
-              <li>Linh hoạt, đổi mới nhanh, dễ thích ứng thị trường</li>
-            </ul>
-          </div>
-          <div>
-            <p className="slide-col-head">📌 Ví dụ cụ thể</p>
-            <ul className="slide-bullets">
-              <li><strong>Toyota:</strong> hợp tác với hơn 10.000 nhà cung cấp linh kiện toàn cầu&nbsp;
-                <a href="https://vi.wikipedia.org/wiki/Toyota" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 vi.wikipedia.org</a></li>
-              <li><strong>Apple:</strong> thiết kế tại Mỹ — linh kiện từ hàng trăm công ty khác nhau&nbsp;
-                <a href="https://www.apple.com/supply-chain/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 apple.com/supply-chain</a></li>
-              <li><strong>Zara:</strong> làm việc với 1.400 xưởng may nhỏ ở Tây Ban Nha&nbsp;
-                <a href="https://en.wikipedia.org/wiki/Zara_(retailer)" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a></li>
-            </ul>
-          </div>
+        <div className="tt-supply-grid">
+          {[
+            { logo: 'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://toyota.com&size=128', corp: 'Toyota', color: '#EB0A1E', bg: 'rgba(235,10,30,.1)', border: 'rgba(235,10,30,.35)', stat: '10.000+', desc: 'nhà cung cấp linh kiện toàn cầu' },
+            { logo: 'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://apple.com&size=128', corp: 'Apple', color: '#c8c8c8', bg: 'rgba(200,200,200,.1)', border: 'rgba(200,200,200,.3)', stat: '200+', desc: 'công ty cung cấp linh kiện' },
+            { logo: 'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://zara.com&size=128', corp: 'Zara', color: '#e0c97f', bg: 'rgba(224,201,127,.1)', border: 'rgba(224,201,127,.3)', stat: '1.400', desc: 'xưởng may nhỏ ở Tây Ban Nha' },
+          ].map(s => (
+            <div key={s.corp} className="tt-supply-card" style={{ background: s.bg, borderColor: s.border }}>
+              <img src={s.logo} alt={s.corp} className="tt-supply-logo" onError={e => { e.target.style.display = 'none' }} />
+              <div className="tt-supply-corp" style={{ color: s.color }}>{s.corp}</div>
+              <div className="tt-supply-stat">{s.stat}</div>
+              <div className="tt-supply-desc">{s.desc}</div>
+            </div>
+          ))}
         </div>
         <div className="speaker-note">
-          💬 <em>Doanh nghiệp nhỏ đóng vai trò quan trọng trong chuỗi cung ứng toàn cầu — họ là mắt xích sản xuất cho các tập đoàn lớn.</em>
+          💬 <em>Doanh nghiệp nhỏ không cạnh tranh với tập đoàn lớn — họ là mắt xích không thể thiếu trong chuỗi sản xuất toàn cầu.</em>
         </div>
       </div>
 
       {/* Slide 5 – Nước đang phát triển */}
       <div className="card">
-        <h3>🌏 Độc quyền ở các Nước đang Phát triển</h3>
-        <p style={{ fontSize: '.9rem', color: 'var(--text)', marginBottom: '.8rem' }}>
-          Độc quyền không chỉ tồn tại ở các nước phát triển mà còn xuất hiện ngày càng mạnh ở các nước đang phát triển.
-        </p>
-        <div className="slide-two-col">
-          <div>
-            <p className="slide-col-head">📌 Ví dụ cụ thể</p>
-            <ul className="slide-bullets">
-              <li><strong>Vingroup (Việt Nam):</strong> bất động sản · VinFast · bán lẻ · công nghệ<br /><a href="https://en.wikipedia.org/wiki/Vingroup" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a></li>
-              <li><strong>Reliance Industries (Ấn Độ):</strong> dầu khí · viễn thông · bán lẻ<br /><a href="https://en.wikipedia.org/wiki/Reliance_Industries" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a></li>
-              <li><strong>Petrobras (Brazil):</strong> chi phối toàn bộ ngành dầu khí<br /><a href="https://en.wikipedia.org/wiki/Petrobras" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a></li>
-              <li><strong>Saudi Aramco (Ả Rập):</strong> độc quyền dầu mỏ quy mô toàn cầu<br /><a href="https://en.wikipedia.org/wiki/Saudi_Aramco" target="_blank" rel="noopener noreferrer" style={{ fontSize: '.78rem', color: 'var(--sky)', opacity: .8 }}>🔗 en.wikipedia.org</a></li>
-            </ul>
-          </div>
-          <div>
-            <p className="slide-col-head">🔑 Nguyên nhân hình thành</p>
-            <ul className="slide-bullets">
-              <li>Đầu tư từ các tập đoàn xuyên quốc gia (TNCs)</li>
-              <li>Ứng dụng khoa học công nghệ hiện đại</li>
-              <li>Quy mô vốn lớn đủ sức chi phối cả một ngành</li>
-            </ul>
-          </div>
+        <h3>🌏 Độc quyền tại các Nước Đang Phát triển</h3>
+        <div className="tt-grid4">
+          {[
+            { flag: '🇻🇳', name: 'Vingroup', fields: 'Bất động sản · VinFast · Bán lẻ · Công nghệ', color: '#e53935' },
+            { flag: '🇮🇳', name: 'Reliance Industries', fields: 'Dầu khí · Viễn thông · Bán lẻ', color: '#1565c0' },
+            { flag: '🇧🇷', name: 'Petrobras', fields: 'Chi phối toàn bộ ngành dầu khí Brazil', color: '#2e7d32' },
+            { flag: '🇸🇦', name: 'Saudi Aramco', fields: 'Độc quyền dầu mỏ quy mô toàn cầu', color: '#f9a825' },
+          ].map(c => (
+            <div key={c.name} className="tt-corp-card" style={{ borderColor: c.color }}>
+              <div className="tt-corp-flag">{c.flag}</div>
+              <div className="tt-corp-name" style={{ color: c.color }}>{c.name}</div>
+              <div className="tt-corp-fields">{c.fields}</div>
+            </div>
+          ))}
+        </div>
+        <div className="slide-examples" style={{ marginTop: '.8rem' }}>
+          <span>🌐 Đầu tư từ TNCs</span>
+          <span>💻 Ứng dụng KH-CN</span>
+          <span>💰 Vốn lớn chi phối ngành</span>
         </div>
         <div className="speaker-note">
-          💬 <em>Ở Việt Nam, Vingroup là ví dụ điển hình — chỉ một tập đoàn nhưng hoạt động từ bất động sản đến ô tô, điện thoại, bệnh viện và trường học.</em>
+          💬 <em>Vingroup — chỉ một tập đoàn nhưng hoạt động từ bất động sản đến ô tô, điện thoại, bệnh viện và trường học.</em>
         </div>
       </div>
 
       {/* Sơ đồ */}
       <div className="card">
-        <h3>📊 Sơ đồ: Cấu trúc Tập đoàn trong Nền kinh tế Hiện đại</h3>
+        <h3>📊 Cấu trúc Tập đoàn trong Nền kinh tế Hiện đại</h3>
         <div className="org-chart">
           <div className="org-top">
             <div className="org-box org-main">🏛️ Tập đoàn lớn<br /><small>Concern / Conglomerate</small></div>
           </div>
           <div className="org-arrow-down">↓</div>
           <div className="org-mid">
-            <div className="org-box org-sub">🏢 Công ty con A<br /><small>Ngành điện tử</small></div>
-            <div className="org-box org-sub">🏢 Công ty con B<br /><small>Ngành tài chính</small></div>
-            <div className="org-box org-sub">🏢 Công ty con C<br /><small>Ngành logistics</small></div>
+            <div className="org-box org-sub">🏢 Công ty con A<br /><small>Điện tử</small></div>
+            <div className="org-box org-sub">🏢 Công ty con B<br /><small>Tài chính</small></div>
+            <div className="org-box org-sub">🏢 Công ty con C<br /><small>Logistics</small></div>
           </div>
           <div className="org-arrow-down">↓</div>
           <div className="org-bottom">
-            <div className="org-box org-small">🏪 DN vừa & nhỏ<br /><small>Gia công · Linh kiện</small></div>
+            <div className="org-box org-small">🏪 DN vừa & nhỏ — Gia công · Linh kiện</div>
           </div>
           <div className="org-arrow-down">↓</div>
           <div className="org-final">
@@ -1127,7 +1092,7 @@ function TichTuSection() {
           </div>
         </div>
         <div className="speaker-note">
-          💬 <em>Tóm lại, tích tụ và tập trung tư bản ngày nay thể hiện qua Concern và Conglomerate hoạt động toàn cầu — bên cạnh đó doanh nghiệp nhỏ vẫn đóng vai trò quan trọng trong chuỗi sản xuất.</em>
+          💬 <em>Tóm lại: Concern và Conglomerate là hai hình thức tập trung tư bản điển hình — cùng với doanh nghiệp nhỏ, chúng tạo nên chuỗi sản xuất toàn cầu.</em>
         </div>
       </div>
 
@@ -1323,6 +1288,100 @@ function XuatKhauSection() {
   return (
     <div className="section">
       <h2>🌍 Biểu hiện mới của Xuất khẩu Tư bản</h2>
+
+      {/* Slide 1 – Tổng quan */}
+      <div className="card highlight">
+        <h3>📌 Bức tranh chuyển đổi</h3>
+        <div className="tt-compare">
+          <div className="tt-compare-col tt-before">
+            <div className="tt-compare-label">Trước đây</div>
+            <ul className="slide-bullets">
+              <li>Nước giàu → Nước nghèo</li>
+              <li>Mục tiêu: khai thác <strong>tài nguyên & nhân công rẻ</strong></li>
+              <li>Hình thức đơn giản, trực tiếp</li>
+            </ul>
+          </div>
+          <div className="tt-compare-arrow">→</div>
+          <div className="tt-compare-col tt-after">
+            <div className="tt-compare-label">Ngày nay</div>
+            <ul className="slide-bullets">
+              <li>Nước phát triển ⇄ Nước phát triển</li>
+              <li>Mục tiêu: <strong>công nghệ cao, lợi nhuận siêu ngạch</strong></li>
+              <li>Hình thức đa dạng: FDI, BOT, BT, PPP...</li>
+            </ul>
+          </div>
+        </div>
+        <div className="speaker-note">
+          🎤 <em>70% dòng vốn FDI toàn cầu ngày nay luân chuyển giữa các nước phát triển — không còn chỉ chảy sang nước nghèo để khai thác tài nguyên.</em>
+        </div>
+      </div>
+
+      {/* Slide 2 – Đặc điểm mới */}
+      <div className="card">
+        <h3>🔑 Đặc điểm mới</h3>
+        <div className="xk-features">
+          {[
+            { icon: '🧠', title: 'Ngành hàm lượng trí tuệ cao', sub: 'Chip, AI, dược phẩm, hàng không vũ trụ' },
+            { icon: '🏢', title: 'Chủ thể: TNCs', sub: 'Công ty xuyên quốc gia đóng vai "nhạc trưởng"' },
+            { icon: '🏗️', title: 'Mô hình BOT / BT', sub: 'Xây dựng – Kinh doanh – Chuyển giao' },
+            { icon: '💰', title: 'Lợi nhuận siêu ngạch', sub: 'Độc quyền công nghệ → kiểm soát giá' },
+          ].map(f => (
+            <div key={f.title} className="xk-feat-card">
+              <div className="xk-feat-icon">{f.icon}</div>
+              <div className="xk-feat-title">{f.title}</div>
+              <div className="xk-feat-sub">{f.sub}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Slide 3 – Hình thức đầu tư */}
+      <div className="card">
+        <h3>🏗️ Hình thức Đầu tư Phức hợp</h3>
+        <div className="xk-model-grid">
+          <div className="xk-model-card">
+            <div className="xk-model-tag" style={{ background: 'rgba(21,101,192,.18)', color: '#90caf9', borderColor: 'rgba(66,165,245,.35)' }}>BOT</div>
+            <div className="xk-model-name">Build – Operate – Transfer</div>
+            <div className="xk-model-desc">Xây dựng → Kinh doanh thu lợi → Chuyển giao nhà nước</div>
+            <div className="xk-model-ex">📌 Cao tốc Bắc-Nam (VN): vốn Nhật, BOT 30 năm</div>
+          </div>
+          <div className="xk-model-card">
+            <div className="xk-model-tag" style={{ background: 'rgba(123,31,162,.18)', color: '#ce93d8', borderColor: 'rgba(186,104,200,.35)' }}>BT</div>
+            <div className="xk-model-name">Build – Transfer</div>
+            <div className="xk-model-desc">Xây dựng → Chuyển giao (đổi lấy đất hoặc tài nguyên)</div>
+            <div className="xk-model-ex">📌 TQ xây đường ở châu Phi đổi quyền khai thác khoáng sản</div>
+          </div>
+          <div className="xk-model-card">
+            <div className="xk-model-tag" style={{ background: 'rgba(0,137,123,.18)', color: '#80cbc4', borderColor: 'rgba(0,188,212,.35)' }}>FDI</div>
+            <div className="xk-model-name">Foreign Direct Investment</div>
+            <div className="xk-model-desc">Đầu tư trực tiếp, lập nhà máy / chi nhánh nước ngoài</div>
+            <div className="xk-model-ex">📌 Samsung đầu tư $20 tỷ vào Việt Nam</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Slide 4 – Ví dụ thực tế */}
+      <div className="card">
+        <h3>💡 Ví dụ thực tế — Samsung tại Texas (Mỹ)</h3>
+        <div className="xk-case">
+          <div className="xk-case-logo">🇰🇷 → 🇺🇸</div>
+          <div className="xk-case-body">
+            <div className="xk-case-title">Samsung đầu tư $17 tỷ xây nhà máy chip bán dẫn tại Taylor, Texas</div>
+            <div className="xk-case-why">
+              <span className="xk-case-why-label">Tại sao đầu tư vào Mỹ — không phải nước nghèo?</span>
+              <ul className="slide-bullets" style={{ marginTop: '.4rem' }}>
+                <li>🏗️ Hạ tầng kỹ thuật đẳng cấp thế giới</li>
+                <li>🎓 Nguồn nhân lực chất lượng cao (kỹ sư chip)</li>
+                <li>📦 Tiếp cận <strong>trực tiếp</strong> thị trường tiêu thụ công nghệ số 1</li>
+                <li>🏛️ Ưu đãi thuế từ chính quyền Texas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="speaker-note">
+          🎤 <em>Đây là minh chứng rõ nhất: vốn chảy đến nơi có <strong>công nghệ cao & thị trường lớn</strong> — không còn đơn giản là tìm nhân công rẻ.</em>
+        </div>
+      </div>
 
       <ImageGallery
         title="🌟 Ví dụ: FDI & Xuất khẩu Tư bản hiện đại"
@@ -1535,6 +1594,105 @@ function ThiTruongSection() {
     <div className="section">
       <h2>🗺️ Phân chia Thị trường Thế giới</h2>
 
+      {/* Slide 1 – Tổng quan */}
+      <div className="card highlight">
+        <h3>📌 Thay đổi cốt lõi</h3>
+        <div className="definition">
+          Phân chia thị trường không còn qua <strong>hiệp ước bí mật</strong> giữa các tập đoàn —
+          mà qua <strong>liên minh kinh tế công khai</strong> tầm châu lục và sức mạnh của TNCs.
+        </div>
+        <div className="slide-examples" style={{ marginTop: '.8rem' }}>
+          <span>🏢 Sức mạnh TNCs</span>
+          <span>🇪🇺 Liên minh khu vực (EU · NAFTA)</span>
+          <span>🛢️ Phản kháng (OPEC)</span>
+        </div>
+      </div>
+
+      {/* Slide 2 – TNCs */}
+      <div className="card">
+        <h3>🏢 Sức mạnh TNCs — Thiết lập "Luật chơi" Toàn cầu</h3>
+        <p style={{ fontSize: '.9rem', marginBottom: '.8rem' }}>
+          TNCs chi phối <strong>thị hiếu, chuỗi cung ứng và giá cả</strong> trên quy mô toàn thế giới.
+        </p>
+        <div className="bigtech-grid">
+          {[
+            { logo: '🍎', name: 'Apple', color: '#aaa', bg: 'rgba(180,180,180,.1)', fields: 'Thiết bị · App Store · Dịch vụ', stat: 'Tiêu chuẩn hóa cả hệ sinh thái di động toàn cầu' },
+            { logo: '💻', name: 'Microsoft', color: '#00BCF2', bg: 'rgba(0,188,242,.1)', fields: 'Phần mềm · Azure · LinkedIn', stat: 'Kiểm soát 75% thị phần hệ điều hành PC' },
+            { logo: '🥤', name: 'Coca-Cola', color: '#E3001B', bg: 'rgba(227,0,27,.1)', fields: 'Nước giải khát · 200+ quốc gia', stat: '1,9 tỷ ly tiêu thụ mỗi ngày' },
+            { logo: '🟦', name: 'Pepsi', color: '#0047BB', bg: 'rgba(0,71,187,.1)', fields: 'Đồ uống · Snack · Thực phẩm', stat: 'Cùng Coca-Cola chiếm >70% thị phần toàn cầu' },
+          ].map(t => (
+            <div key={t.name} className="bigtech-card" style={{ borderColor: t.color, background: t.bg }}>
+              <div className="bigtech-logo" style={{ color: t.color }}>{t.logo}</div>
+              <div className="bigtech-name" style={{ color: t.color }}>{t.name}</div>
+              <div className="bigtech-fields">{t.fields}</div>
+              <div className="bigtech-stat">📊 {t.stat}</div>
+            </div>
+          ))}
+        </div>
+        <div className="speaker-note">
+          🎤 <em>Coca-Cola ở Mỹ, Việt Nam, châu Phi — đi đâu cũng thấy. Đó là TNCs thiết lập "luật chơi" toàn cầu.</em>
+        </div>
+      </div>
+
+      {/* Slide 3 – Liên minh khu vực */}
+      <div className="card">
+        <h3>🌍 Liên minh Kinh tế Khu vực — Tư bản Kết khối</h3>
+        <div className="tht-alliance-grid">
+          <div className="tht-alliance-card" style={{ borderColor: '#3949ab' }}>
+            <div className="tht-alliance-flag">🇪🇺</div>
+            <div className="tht-alliance-name" style={{ color: '#9fa8da' }}>Liên minh Châu Âu (EU)</div>
+            <ul className="slide-bullets">
+              <li>27 quốc gia · đồng tiền chung <strong>Euro</strong></li>
+              <li>GDP: $18 nghìn tỷ</li>
+              <li>Hàng hóa, vốn, lao động tự do lưu chuyển</li>
+            </ul>
+          </div>
+          <div className="tht-alliance-card" style={{ borderColor: '#283593' }}>
+            <div className="tht-alliance-flag">🇺🇸🇨🇦🇲🇽</div>
+            <div className="tht-alliance-name" style={{ color: '#90caf9' }}>NAFTA / USMCA (Bắc Mỹ)</div>
+            <ul className="slide-bullets">
+              <li>Mỹ · Canada · Mexico</li>
+              <li>GDP: $28 nghìn tỷ</li>
+              <li>Xóa bỏ 99% thuế quan nội khối</li>
+            </ul>
+          </div>
+          <div className="tht-alliance-card" style={{ borderColor: '#007A5E' }}>
+            <div className="tht-alliance-flag">🛢️</div>
+            <div className="tht-alliance-name" style={{ color: '#80cbc4' }}>OPEC — Sự phản kháng</div>
+            <ul className="slide-bullets">
+              <li>13 nước đang phát triển</li>
+              <li>40% sản lượng dầu thế giới</li>
+              <li>Bảo vệ giá tài nguyên trước sức ép cường quốc</li>
+            </ul>
+          </div>
+        </div>
+        <div className="speaker-note">
+          🎤 <em>Tư bản kết khối qua EU, NAFTA để tăng sức cạnh tranh — các nước đang phát triển cũng liên minh OPEC để tự bảo vệ.</em>
+        </div>
+      </div>
+
+      {/* Slide 4 – Ví dụ Coca-Cola & Pepsi */}
+      <div className="card">
+        <h3>💡 Ví dụ thực tế — Coca-Cola & Pepsi phân chia thế giới</h3>
+        <div className="xk-case">
+          <div className="xk-case-logo">🥤⚔️🟦</div>
+          <div className="xk-case-body">
+            <div className="xk-case-title">Hai "ông lớn" nắm giữ phần lớn thị phần nước giải khát toàn cầu</div>
+            <div className="xk-case-why">
+              <ul className="slide-bullets" style={{ marginTop: '.4rem' }}>
+                <li>Hiện diện tại <strong>hơn 200 quốc gia</strong> — từ Mỹ đến Việt Nam đến châu Phi</li>
+                <li>Cùng kiểm soát <strong>&gt;70%</strong> thị phần nước giải khát có ga toàn cầu</li>
+                <li>Mạng lưới phân phối khổng lồ — đối thủ nhỏ gần như <strong>không thể chen chân</strong></li>
+                <li>Thiết lập luật chơi: giá cả · kênh phân phối · thị hiếu người tiêu dùng</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="speaker-note">
+          🎤 <em>Đây không phải cạnh tranh bình thường — đây là hai tập đoàn CÙNG chia nhau thị trường, dựng rào cản ngăn mọi đối thủ nhỏ.</em>
+        </div>
+      </div>
+
       <ImageGallery
         title="🤝 Liên minh kinh tế & Tổ chức độc quyền"
         items={[
@@ -1741,6 +1899,107 @@ function LanhThoSection() {
   return (
     <div className="section">
       <h2>⚔️ Phân chia Lãnh thổ Ảnh hưởng</h2>
+
+      {/* Slide 1 – Tổng quan */}
+      <div className="card highlight">
+        <h3>📌 Thực dân mới — Chiến lược "Biên giới mềm"</h3>
+        <div className="tt-compare">
+          <div className="tt-compare-col tt-before">
+            <div className="tt-compare-label">Thực dân cũ</div>
+            <ul className="slide-bullets">
+              <li>Chiếm đóng <strong>lãnh thổ địa lý</strong></li>
+              <li>Kiểm soát bằng <strong>súng đạn & quân đội</strong></li>
+              <li>Lộ liễu, dễ bị phản kháng</li>
+            </ul>
+          </div>
+          <div className="tt-compare-arrow">→</div>
+          <div className="tt-compare-col tt-after">
+            <div className="tt-compare-label">Thực dân mới</div>
+            <ul className="slide-bullets">
+              <li>Kiểm soát bằng <strong>Vốn · Công nghệ · Thuế quan</strong></li>
+              <li>Tạo ra <strong>lệ thuộc kinh tế</strong> thay vì vũ lực</li>
+              <li>Tinh vi hơn, khó nhận ra hơn</li>
+            </ul>
+          </div>
+        </div>
+        <div className="speaker-note">
+          🎤 <em>Sự thống trị ngày nay không nằm ở khẩu súng — mà nằm ở Dòng vốn, Công nghệ và Thuế quan.</em>
+        </div>
+      </div>
+
+      {/* Slide 2 – Chuỗi lệ thuộc */}
+      <div className="card">
+        <h3>🔗 Chuỗi Lệ thuộc — Từ Kinh tế đến Chính trị</h3>
+        <div className="definition" style={{ marginBottom: '.9rem' }}>
+          Các nước đang phát triển tuy <strong>độc lập về danh nghĩa</strong> nhưng bị ràng buộc
+          chặt chẽ vào nợ, công nghệ và thị trường của các nước tư bản.
+        </div>
+        <div className="ldt-dep-chain">
+          {[
+            { icon: '💸', label: 'Lệ thuộc VỐN', sub: 'Vay ODA, FDI có điều kiện' },
+            { icon: '💻', label: 'Lệ thuộc CÔNG NGHỆ', sub: 'Nhập máy móc, bản quyền, hạ tầng số' },
+            { icon: '📦', label: 'Lệ thuộc KINH TẾ', sub: 'Phụ thuộc thị trường xuất khẩu, nguyên liệu' },
+            { icon: '🏛️', label: 'Lệ thuộc CHÍNH TRỊ', sub: 'Mất chủ quyền thực chất dù độc lập hình thức' },
+          ].map((s, i, arr) => (
+            <div key={s.label} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div className="ldt-dep-step">
+                <div className="ldt-dep-icon">{s.icon}</div>
+                <div className="ldt-dep-label">{s.label}</div>
+                <div className="ldt-dep-sub">{s.sub}</div>
+              </div>
+              {i < arr.length - 1 && <div className="ldt-dep-arrow">↓</div>}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Slide 3 – Xung đột kiểu mới */}
+      <div className="card">
+        <h3>💥 Xung đột Kiểu Mới — Thay thế Chiến tranh Súng đạn</h3>
+        <div className="ldt-conflict-grid">
+          <div className="ldt-conflict-card" style={{ borderColor: '#e53935' }}>
+            <div className="ldt-conflict-icon">📦</div>
+            <div className="ldt-conflict-title" style={{ color: '#ef9a9a' }}>Chiến tranh Thương mại</div>
+            <div className="ldt-conflict-desc">Áp thuế quan, rào cản kỹ thuật, hạn chế nhập khẩu</div>
+          </div>
+          <div className="ldt-conflict-card" style={{ borderColor: '#f57c00' }}>
+            <div className="ldt-conflict-icon">🚫</div>
+            <div className="ldt-conflict-title" style={{ color: '#ffb74d' }}>Cấm vận Kinh tế</div>
+            <div className="ldt-conflict-desc">Cô lập tài chính, loại khỏi SWIFT, trừng phạt kinh tế</div>
+          </div>
+          <div className="ldt-conflict-card" style={{ borderColor: '#7b1fa2' }}>
+            <div className="ldt-conflict-icon">💻</div>
+            <div className="ldt-conflict-title" style={{ color: '#ce93d8' }}>Chiến tranh Công nghệ</div>
+            <div className="ldt-conflict-desc">Cấm chip, kiểm soát AI, tẩy chay hạ tầng số đối thủ</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Slide 4 – Ví dụ Mỹ - Trung */}
+      <div className="card">
+        <h3>💡 Ví dụ thực tế — Mỹ · Trung và "Biên giới Công nghệ"</h3>
+        <div className="xk-case">
+          <div className="xk-case-logo">🇺🇸⚔️🇨🇳</div>
+          <div className="xk-case-body">
+            <div className="xk-case-title">Mỹ hạn chế Huawei tiếp cận công nghệ chip bán dẫn</div>
+            <div className="xk-case-why">
+              <ul className="slide-bullets" style={{ marginTop: '.4rem' }}>
+                <li>🚷 Cấm xuất khẩu chip tiên tiến (&lt;7nm) sang Trung Quốc</li>
+                <li>🌐 Vận động Hà Lan cấm ASML bán máy EUV cho TQ</li>
+                <li>📡 Hơn 30 quốc gia cấm / hạn chế hạ tầng 5G Huawei</li>
+                <li>🎯 Mục tiêu: kiểm soát <strong>"biên giới công nghệ"</strong> — ngăn TQ bành trướng trên bản đồ số thế giới</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="tt-features" style={{ marginTop: '.8rem' }}>
+          <div className="tt-feat tt-feat-ok">Không cần chiến tranh súng đạn</div>
+          <div className="tt-feat tt-feat-warn">Hiệu quả hơn: cô lập công nghệ = mất lợi thế kinh tế lâu dài</div>
+        </div>
+        <div className="speaker-note">
+          🎤 <em>Đây không chỉ là vấn đề kinh tế — đây là cách một cường quốc kiểm soát "biên giới công nghệ" thay cho biên giới địa lý.</em>
+        </div>
+      </div>
 
       <ImageGallery
         title="🇺🇸 Các tổ chức địa chính trị & quân sự"
